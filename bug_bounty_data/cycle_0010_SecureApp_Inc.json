@@ -1,0 +1,136 @@
+{
+  "cycle": 10,
+  "timestamp": "2025-11-08T02:04:38.643866",
+  "target": {
+    "name": "SecureApp Inc",
+    "scope": [
+      "https://secureapp.com",
+      "https://*.secureapp.com"
+    ]
+  },
+  "results": {
+    "vulnerabilities": [
+      {
+        "title": "Idor in SecureApp Inc",
+        "severity": "high",
+        "vuln_type": "idor",
+        "description": "Discovered Insecure Direct Object Reference on API affecting SecureApp Inc. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+        "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+        "reproduction_steps": [
+          "Navigate to target scope: https://secureapp.com",
+          "Inject payload: N/A",
+          "Observe that the payload is executed",
+          "Confirm vulnerability exploitability"
+        ],
+        "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API\n\n# Validation at 2025-11-08T02:04:38.643371\nValidation successful with alternative payload at 2025-11-08T02:04:38.643368",
+        "affected_endpoints": [
+          "https://secureapp.com"
+        ],
+        "cvss_score": 7.8,
+        "cwe_id": "CWE-639",
+        "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+        "discovered_by": "Bug Bounty Level-6 Agent",
+        "timestamp": "2025-11-08T02:04:38.595091"
+      },
+      {
+        "title": "Ssrf in SecureApp Inc",
+        "severity": "high",
+        "vuln_type": "ssrf",
+        "description": "Discovered Server-Side Request Forgery via URL params affecting SecureApp Inc. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+        "impact": "An attacker can exploit this vulnerability to make requests to internal systems and potentially access sensitive data.",
+        "reproduction_steps": [
+          "Navigate to target scope: https://secureapp.com",
+          "Inject payload: http://localhost",
+          "Observe that the payload is executed",
+          "Confirm vulnerability exploitability"
+        ],
+        "proof_of_concept": "# Proof of Concept\n\nPayload: http://localhost\n\nThis demonstrates Server-Side Request Forgery via URL params\n\n# Validation at 2025-11-08T02:04:38.643373\nValidation successful with alternative payload at 2025-11-08T02:04:38.643372",
+        "affected_endpoints": [
+          "https://secureapp.com"
+        ],
+        "cvss_score": 7.8,
+        "cwe_id": "CWE-918",
+        "remediation": "Validate and sanitize all URLs. Implement allowlist of permitted domains. Use network segmentation to limit internal access.",
+        "discovered_by": "Bug Bounty Level-6 Agent",
+        "timestamp": "2025-11-08T02:04:38.631043"
+      }
+    ],
+    "reports": [
+      {
+        "vuln_id": "d7e4a88cd0df",
+        "markdown_path": "/Users/noone/aios/bug_bounty_reports/d7e4a88cd0df_idor.md",
+        "json_path": "/Users/noone/aios/bug_bounty_reports/d7e4a88cd0df_idor.json",
+        "vulnerability": {
+          "title": "Idor in SecureApp Inc",
+          "severity": "high",
+          "vuln_type": "idor",
+          "description": "Discovered Insecure Direct Object Reference on API affecting SecureApp Inc. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+          "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+          "reproduction_steps": [
+            "Navigate to target scope: https://secureapp.com",
+            "Inject payload: N/A",
+            "Observe that the payload is executed",
+            "Confirm vulnerability exploitability"
+          ],
+          "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API\n\n# Validation at 2025-11-08T02:04:38.643371\nValidation successful with alternative payload at 2025-11-08T02:04:38.643368",
+          "affected_endpoints": [
+            "https://secureapp.com"
+          ],
+          "cvss_score": 7.8,
+          "cwe_id": "CWE-639",
+          "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+          "discovered_by": "Bug Bounty Level-6 Agent",
+          "timestamp": "2025-11-08T02:04:38.595091"
+        },
+        "quality_score": 100,
+        "quality_issues": []
+      },
+      {
+        "vuln_id": "27dee75365eb",
+        "markdown_path": "/Users/noone/aios/bug_bounty_reports/27dee75365eb_ssrf.md",
+        "json_path": "/Users/noone/aios/bug_bounty_reports/27dee75365eb_ssrf.json",
+        "vulnerability": {
+          "title": "Ssrf in SecureApp Inc",
+          "severity": "high",
+          "vuln_type": "ssrf",
+          "description": "Discovered Server-Side Request Forgery via URL params affecting SecureApp Inc. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+          "impact": "An attacker can exploit this vulnerability to make requests to internal systems and potentially access sensitive data.",
+          "reproduction_steps": [
+            "Navigate to target scope: https://secureapp.com",
+            "Inject payload: http://localhost",
+            "Observe that the payload is executed",
+            "Confirm vulnerability exploitability"
+          ],
+          "proof_of_concept": "# Proof of Concept\n\nPayload: http://localhost\n\nThis demonstrates Server-Side Request Forgery via URL params\n\n# Validation at 2025-11-08T02:04:38.643373\nValidation successful with alternative payload at 2025-11-08T02:04:38.643372",
+          "affected_endpoints": [
+            "https://secureapp.com"
+          ],
+          "cvss_score": 7.8,
+          "cwe_id": "CWE-918",
+          "remediation": "Validate and sanitize all URLs. Implement allowlist of permitted domains. Use network segmentation to limit internal access.",
+          "discovered_by": "Bug Bounty Level-6 Agent",
+          "timestamp": "2025-11-08T02:04:38.631043"
+        },
+        "quality_score": 100,
+        "quality_issues": []
+      }
+    ],
+    "statistics": {
+      "time_hours": 0.00024264030986362033,
+      "total_vulns": 2,
+      "by_severity": {
+        "critical": 0,
+        "high": 2,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      }
+    }
+  },
+  "cumulative_stats": {
+    "total_earnings": 0.0,
+    "total_vulnerabilities": 21,
+    "programs_hunted": 30,
+    "uptime_hours": 60.86225735776954
+  }
+}

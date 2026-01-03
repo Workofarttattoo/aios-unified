@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "scan_interval_hours": 6,
+  "hunt_time_per_program_hours": 2,
+  "max_concurrent_hunts": 2,
+  "platforms": [
+    "hackerone",
+    "bugcrowd",
+    "intigriti"
+  ],
+  "auto_submit": false,
+  "daily_report_time": "09:00"
+}

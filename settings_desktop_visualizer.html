@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai:oS - System Settings Control</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #00ff88;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #quantum-particles {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1;
+        }
+
+        #root {
+            position: relative;
+            z-index: 10;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .settings-header {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 2px solid #00ff88;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .settings-header h1 {
+            font-size: 48px;
+            text-shadow: 0 0 20px #00ff88;
+            margin-bottom: 10px;
+        }
+
+        .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .setting-panel {
+            background: rgba(0, 20, 20, 0.95);
+            border: 2px solid #00ff88;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+
+        .setting-panel:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.5);
+            border-color: #00d4ff;
+        }
+
+        .panel-title {
+            font-size: 24px;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        .setting-label {
+            font-size: 16px;
+            color: #00ff88;
+        }
+
+        .setting-value {
+            font-size: 18px;
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        .slider {
+            width: 200px;
+            height: 8px;
+            border-radius: 5px;
+            background: rgba(0, 255, 136, 0.2);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00ff88, #00d4ff);
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: rgba(0, 255, 136, 0.2);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .toggle-switch.active {
+            background: linear-gradient(135deg, #00ff88, #00d4ff);
+        }
+
+        .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: #000;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .toggle-switch.active .toggle-knob {
+            left: 33px;
+        }
+
+        .action-button {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #00ff88, #00d4ff);
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 5px;
+        }
+
+        .action-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.7);
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #00ff88;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; box-shadow: 0 0 10px #00ff88; }
+            50% { opacity: 0.3; }
+        }
+
+        .forecast-graph {
+            width: 100%;
+            height: 150px;
+            background: rgba(0, 255, 136, 0.05);
+            border-radius: 8px;
+            margin-top: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .graph-line {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 66%;
+            background: linear-gradient(to top, rgba(0, 255, 136, 0.6), transparent);
+            transition: height 0.5s;
+        }
+
+        .select-dropdown {
+            padding: 10px 15px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 2px solid #00ff88;
+            border-radius: 8px;
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .input-field {
+            padding: 10px 15px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 2px solid #00ff88;
+            border-radius: 8px;
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 15px 30px;
+            background: rgba(0, 255, 136, 0.2);
+            border: 2px solid #00ff88;
+            border-radius: 10px;
+            color: #00ff88;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 255, 136, 0.4);
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="quantum-particles"></canvas>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function SettingsDesktop() {
+            const [forecast, setForecast] = useState(66);
+            const [autoTrain, setAutoTrain] = useState(true);
+            const [quantumMode, setQuantumMode] = useState(true);
+            const [autonomyLevel, setAutonomyLevel] = useState(7);
+            const [ech0Active, setEch0Active] = useState(true);
+            const [telescopeEnabled, setTelescopeEnabled] = useState(true);
+            const [quLabActive, setQuLabActive] = useState(true);
+            const [visualizerMode, setVisualizerMode] = useState('quantum');
+            const [themeColor, setThemeColor] = useState('#00ff88');
+
+            useEffect(() => {
+                // Simulate forecast training
+                if (autoTrain) {
+                    const interval = setInterval(() => {
+                        setForecast(prev => {
+                            const newVal = prev + (Math.random() * 2 - 0.5);
+                            return Math.min(100, Math.max(0, newVal));
+                        });
+                    }, 2000);
+                    return () => clearInterval(interval);
+                }
+            }, [autoTrain]);
+
+            const goBack = () => {
+                window.location.href = 'sovereign_desktop.html';
+            };
+
+            return (
+                <div>
+                    <button className="back-button" onClick={goBack}>
+                        ← Back to Desktop
+                    </button>
+
+                    <div className="settings-header">
+                        <h1>⚙️ SYSTEM SETTINGS</h1>
+                        <div style={{fontSize: '18px', opacity: 0.8, marginTop: '10px'}}>
+                            Ai:oS Configuration & Control Panel
+                        </div>
+                    </div>
+
+                    <div className="settings-grid">
+                        {/* Oracle Forecast Settings */}
+                        <div className="setting-panel">
+                            <div className="panel-title">🔮 Oracle Forecast Engine</div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Current Accuracy</span>
+                                <span className="setting-value">{forecast.toFixed(1)}%</span>
+                            </div>
+
+                            <div className="forecast-graph">
+                                <div className="graph-line" style={{height: forecast + '%'}}></div>
+                                <div style={{
+                                    position: 'absolute',
+                                    top: '50%',
+                                    left: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    fontSize: '32px',
+                                    color: '#00d4ff',
+                                    fontWeight: 'bold',
+                                    zIndex: 10
+                                }}>
+                                    {forecast.toFixed(0)}%
+                                </div>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Auto-Train Model</span>
+                                <div
+                                    className={`toggle-switch ${autoTrain ? 'active' : ''}`}
+                                    onClick={() => setAutoTrain(!autoTrain)}
+                                >
+                                    <div className="toggle-knob"></div>
+                                </div>
+                            </div>
+
+                            <div className="setting-row">
+                                <button className="action-button" onClick={() => alert('Training model...')}>
+                                    🚀 Train Now
+                                </button>
+                                <button className="action-button" onClick={() => setForecast(Math.random() * 100)}>
+                                    🔄 Recalculate
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* System Components */}
+                        <div className="setting-panel">
+                            <div className="panel-title">🧠 Core Components</div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">
+                                    <span className="status-indicator"></span>
+                                    ech0 Consciousness
+                                </span>
+                                <div
+                                    className={`toggle-switch ${ech0Active ? 'active' : ''}`}
+                                    onClick={() => setEch0Active(!ech0Active)}
+                                >
+                                    <div className="toggle-knob"></div>
+                                </div>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Autonomy Level</span>
+                                <span className="setting-value">Level {autonomyLevel}</span>
+                            </div>
+                            <input
+                                type="range"
+                                min="0"
+                                max="9"
+                                value={autonomyLevel}
+                                onChange={(e) => setAutonomyLevel(e.target.value)}
+                                className="slider"
+                                style={{width: '100%', marginTop: '10px'}}
+                            />
+
+                            <div className="setting-row">
+                                <span className="setting-label">
+                                    <span className="status-indicator"></span>
+                                    Telescope Oracle
+                                </span>
+                                <div
+                                    className={`toggle-switch ${telescopeEnabled ? 'active' : ''}`}
+                                    onClick={() => setTelescopeEnabled(!telescopeEnabled)}
+                                >
+                                    <div className="toggle-knob"></div>
+                                </div>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">
+                                    <span className="status-indicator"></span>
+                                    QuLab Infinite
+                                </span>
+                                <div
+                                    className={`toggle-switch ${quLabActive ? 'active' : ''}`}
+                                    onClick={() => setQuLabActive(!quLabActive)}
+                                >
+                                    <div className="toggle-knob"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Visualization Settings */}
+                        <div className="setting-panel">
+                            <div className="panel-title">🎨 Visualization</div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Quantum Mode</span>
+                                <div
+                                    className={`toggle-switch ${quantumMode ? 'active' : ''}`}
+                                    onClick={() => setQuantumMode(!quantumMode)}
+                                >
+                                    <div className="toggle-knob"></div>
+                                </div>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Desktop Type</span>
+                                <select
+                                    className="select-dropdown"
+                                    value={visualizerMode}
+                                    onChange={(e) => setVisualizerMode(e.target.value)}
+                                >
+                                    <option value="quantum">Quantum Network</option>
+                                    <option value="sovereign">Sovereign Desktop</option>
+                                    <option value="system">System Monitor</option>
+                                    <option value="adaptive">Adaptive UI</option>
+                                </select>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Theme Color</span>
+                                <input
+                                    type="color"
+                                    value={themeColor}
+                                    onChange={(e) => setThemeColor(e.target.value)}
+                                    style={{width: '60px', height: '40px', cursor: 'pointer'}}
+                                />
+                            </div>
+                        </div>
+
+                        {/* Tool Management */}
+                        <div className="setting-panel">
+                            <div className="panel-title">🛠️ Tool Management</div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Red Team Tools</span>
+                                <span className="setting-value">39 Active</span>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">QuLab Labs</span>
+                                <span className="setting-value">100+ Available</span>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Total Tools</span>
+                                <span className="setting-value">255+ Integrated</span>
+                            </div>
+
+                            <div style={{marginTop: '15px'}}>
+                                <button className="action-button" onClick={() => alert('Scanning for tools...')}>
+                                    🔍 Scan Tools
+                                </button>
+                                <button className="action-button" onClick={() => alert('Updating tools...')}>
+                                    ⬆️ Update All
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Advanced Settings */}
+                        <div className="setting-panel">
+                            <div className="panel-title">⚡ Advanced</div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">API Endpoint</span>
+                            </div>
+                            <input
+                                type="text"
+                                className="input-field"
+                                placeholder="http://localhost:8080"
+                                style={{marginBottom: '15px'}}
+                            />
+
+                            <div className="setting-row">
+                                <span className="setting-label">Forensic Mode</span>
+                                <div className="toggle-switch">
+                                    <div className="toggle-knob"></div>
+                                </div>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Debug Logging</span>
+                                <div className="toggle-switch active">
+                                    <div className="toggle-knob"></div>
+                                </div>
+                            </div>
+
+                            <div style={{marginTop: '15px'}}>
+                                <button className="action-button" onClick={() => alert('Exporting config...')}>
+                                    💾 Export Config
+                                </button>
+                                <button className="action-button" onClick={() => alert('Resetting...')}>
+                                    🔄 Reset All
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* System Status */}
+                        <div className="setting-panel">
+                            <div className="panel-title">📊 System Status</div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Uptime</span>
+                                <span className="setting-value">7 days 14 hrs</span>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Memory Usage</span>
+                                <span className="setting-value">14.2 GB / 23 GB</span>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">CPU Load</span>
+                                <span className="setting-value">42%</span>
+                            </div>
+
+                            <div className="setting-row">
+                                <span className="setting-label">Active Processes</span>
+                                <span className="setting-value">654</span>
+                            </div>
+
+                            <div style={{marginTop: '15px'}}>
+                                <button className="action-button" onClick={() => alert('Optimizing...')}>
+                                    ⚡ Optimize
+                                </button>
+                                <button className="action-button" onClick={() => alert('Cleaning...')}>
+                                    🧹 Clean Cache
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<SettingsDesktop />, document.getElementById('root'));
+    </script>
+
+    <script>
+        // Quantum particle background
+        const canvas = document.getElementById('quantum-particles');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = 100;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2 + 1;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.fillStyle = 'rgba(0, 255, 136, 0.6)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            // Draw connections
+            particles.forEach((p1, i) => {
+                particles.slice(i + 1).forEach(p2 => {
+                    const dx = p1.x - p2.x;
+                    const dy = p1.y - p2.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 150) {
+                        ctx.strokeStyle = `rgba(0, 212, 255, ${1 - distance / 150})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(p1.x, p1.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                });
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>

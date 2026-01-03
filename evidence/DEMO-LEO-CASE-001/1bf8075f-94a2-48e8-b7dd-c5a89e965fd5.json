@@ -1,0 +1,42 @@
+{
+  "analyses": [
+    {
+      "bank": "VISA Test Bank",
+      "bin": "411111",
+      "last_four": "1111",
+      "notes": [
+        "Test card - commonly used in fraud testing"
+      ],
+      "risk": "test",
+      "valid_luhn": true
+    },
+    {
+      "bank": "MasterCard Test",
+      "bin": "520000",
+      "last_four": "0000",
+      "notes": [
+        "Test card - commonly used in fraud testing",
+        "Failed Luhn check - likely invalid or typo"
+      ],
+      "risk": "high",
+      "valid_luhn": false
+    },
+    {
+      "bank": "American Express Test",
+      "bin": "340000",
+      "last_four": "0000",
+      "notes": [
+        "Test card - commonly used in fraud testing"
+      ],
+      "risk": "test",
+      "valid_luhn": true
+    }
+  ],
+  "risk_summary": {
+    "high_risk": 1,
+    "low_risk": 2,
+    "medium_risk": 0
+  },
+  "timestamp": "2025-11-11T16:56:50.185548",
+  "total_cards": 3
+}

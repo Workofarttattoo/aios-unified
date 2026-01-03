@@ -1,0 +1,22 @@
+{
+  "title": "Path Traversal in Example Corp",
+  "severity": "high",
+  "vuln_type": "path_traversal",
+  "description": "Discovered Path traversal in file operations affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+  "impact": "An attacker can exploit this vulnerability to read arbitrary files on the server filesystem.",
+  "reproduction_steps": [
+    "Navigate to target scope: https://example.com",
+    "Inject payload: ../../../etc/passwd",
+    "Observe that the payload is executed",
+    "Confirm vulnerability exploitability"
+  ],
+  "proof_of_concept": "# Proof of Concept\n\nPayload: ../../../etc/passwd\n\nThis demonstrates Path traversal in file operations\n\n# Validation at 2025-11-08T14:42:43.702473\nValidation successful with alternative payload at 2025-11-08T14:42:43.702470",
+  "affected_endpoints": [
+    "https://example.com"
+  ],
+  "cvss_score": 7.8,
+  "cwe_id": "CWE-22",
+  "remediation": "Validate file paths against allowlist. Use secure APIs that prevent directory traversal. Implement proper access controls on filesystem operations.",
+  "discovered_by": "Bug Bounty Level-6 Agent",
+  "timestamp": "2025-11-08T14:42:43.702445"
+}

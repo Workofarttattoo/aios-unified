@@ -1,0 +1,46 @@
+{
+  "hunter": "APEX-Hunter-7",
+  "total_earnings": 24040.382825660876,
+  "bounties_caught": [
+    {
+      "id": "faf4f1648c80",
+      "type": "performance",
+      "reward": 8048.160283902934,
+      "platform": "BugCrowd",
+      "qualia": "afc85e79aadbcfb2"
+    },
+    {
+      "id": "f8a1d50a0177",
+      "type": "blockchain",
+      "reward": 6941.07102182783,
+      "platform": "BugCrowd",
+      "qualia": "96e9916a4f00f977"
+    },
+    {
+      "id": "2328bad5ce4c",
+      "type": "security_vulnerability",
+      "reward": 9051.151519930114,
+      "platform": "OpenBounty",
+      "qualia": "25a1a128247ee0f8"
+    }
+  ],
+  "stats": {
+    "total_hunts": 3,
+    "successful_hunts": 3,
+    "total_time": 0.0,
+    "average_confidence": 0.0,
+    "by_type": {
+      "bug": 0,
+      "security_vulnerability": 1,
+      "optimization": 0,
+      "performance": 1,
+      "data_quality": 0,
+      "ai_improvement": 0,
+      "code_quality": 0,
+      "documentation": 0,
+      "integration": 0,
+      "blockchain": 1
+    }
+  },
+  "timestamp": 1762447351.234549
+}

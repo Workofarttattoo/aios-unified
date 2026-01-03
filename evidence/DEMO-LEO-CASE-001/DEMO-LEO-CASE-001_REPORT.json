@@ -1,0 +1,91 @@
+{
+  "case_id": "DEMO-LEO-CASE-001",
+  "report_generated": "2025-11-11T16:56:50.187438",
+  "generated_by": "noone@Noones-MacBook-Pro.local",
+  "case_metadata": {
+    "created_at": "2025-11-11T16:56:26.803714",
+    "created_by": "noone@Noones-MacBook-Pro.local",
+    "description": "Authorized law enforcement operation - FBI-AUTH-2025-DEMO",
+    "authorization_ref": "FBI-AUTH-2025-DEMO",
+    "status": "active"
+  },
+  "evidence_count": 3,
+  "evidence_items": [
+    {
+      "evidence_id": "7aec58af-1f2e-4ca0-accc-d218892d85a3",
+      "timestamp": "2025-11-11T16:56:50.182493",
+      "operator": "noone",
+      "hostname": "Noones-MacBook-Pro.local",
+      "evidence_type": "network_reconnaissance",
+      "source": "LEO_Suite",
+      "target": "192.168.1.100",
+      "sha256_hash": "a066c807f44c4fad7d0a6fa90c05ce216faeced329017417200bce6d8dac8edb",
+      "file_path": "/Users/noone/aios/evidence/DEMO-LEO-CASE-001/7aec58af-1f2e-4ca0-accc-d218892d85a3.json",
+      "metadata": {
+        "target_type": "ip"
+      },
+      "chain_of_custody": [
+        {
+          "entry_id": "875207ff-d481-4dd5-b543-d2de0983ad48",
+          "timestamp": "2025-11-11T16:56:50.183585",
+          "operator": "noone@Noones-MacBook-Pro.local",
+          "action": "collected",
+          "notes": "Evidence collected by LEO_Suite",
+          "integrity_verified": true,
+          "hash_at_time": "a066c807f44c4fad7d0a6fa90c05ce216faeced329017417200bce6d8dac8edb"
+        }
+      ]
+    },
+    {
+      "evidence_id": "1bf8075f-94a2-48e8-b7dd-c5a89e965fd5",
+      "timestamp": "2025-11-11T16:56:50.185671",
+      "operator": "noone",
+      "hostname": "Noones-MacBook-Pro.local",
+      "evidence_type": "card_data_analysis",
+      "source": "financial_crime_analyzer",
+      "target": "batch_analysis",
+      "sha256_hash": "4f6799c62f92162f54211ec53c80df3fbf181a15b4d2ac2024ff0150d4d9d5ca",
+      "file_path": "/Users/noone/aios/evidence/DEMO-LEO-CASE-001/1bf8075f-94a2-48e8-b7dd-c5a89e965fd5.json",
+      "metadata": {
+        "card_count": 3
+      },
+      "chain_of_custody": [
+        {
+          "entry_id": "b170097a-3a2d-4e0d-9374-9e3713381840",
+          "timestamp": "2025-11-11T16:56:50.186129",
+          "operator": "noone@Noones-MacBook-Pro.local",
+          "action": "collected",
+          "notes": "Evidence collected by financial_crime_analyzer",
+          "integrity_verified": true,
+          "hash_at_time": "4f6799c62f92162f54211ec53c80df3fbf181a15b4d2ac2024ff0150d4d9d5ca"
+        }
+      ]
+    },
+    {
+      "evidence_id": "0bdfbf11-7277-4f6b-bf6e-2429985af98f",
+      "timestamp": "2025-11-11T16:56:50.186443",
+      "operator": "noone",
+      "hostname": "Noones-MacBook-Pro.local",
+      "evidence_type": "transaction_pattern_analysis",
+      "source": "financial_crime_analyzer",
+      "target": "transaction_log",
+      "sha256_hash": "7b4447745c74485deed2c01e1b8227e762f2ae2199d089734d4f1ec9a0bd9c62",
+      "file_path": "/Users/noone/aios/evidence/DEMO-LEO-CASE-001/0bdfbf11-7277-4f6b-bf6e-2429985af98f.json",
+      "metadata": {
+        "transaction_count": 4
+      },
+      "chain_of_custody": [
+        {
+          "entry_id": "abc0896e-7bbc-40d2-af73-257d7f37698e",
+          "timestamp": "2025-11-11T16:56:50.186814",
+          "operator": "noone@Noones-MacBook-Pro.local",
+          "action": "collected",
+          "notes": "Evidence collected by financial_crime_analyzer",
+          "integrity_verified": true,
+          "hash_at_time": "7b4447745c74485deed2c01e1b8227e762f2ae2199d089734d4f1ec9a0bd9c62"
+        }
+      ]
+    }
+  ],
+  "report_hash": "d14eec3d0402df63d1f6371d8dc3847d5d177e374c28180a666e267f1b14fc0e"
+}

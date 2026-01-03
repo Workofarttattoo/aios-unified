@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://api.example.com",
+    "program_name": "Example Corp",
+    "platforms": [
+      "hackerone"
+    ],
+    "min_bounty": 100,
+    "max_bounty": 10000,
+    "avg_bounty": 1500,
+    "response_time_days": 7.0,
+    "acceptance_rate": 0.65,
+    "difficulty": "medium",
+    "success_count": 0,
+    "attempt_count": 0
+  }
+]

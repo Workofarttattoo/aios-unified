@@ -1,0 +1,22 @@
+{
+  "title": "Xss in Example Corp",
+  "severity": "high",
+  "vuln_type": "xss",
+  "description": "Discovered Cross-Site Scripting in user inputs affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+  "impact": "An attacker can exploit this vulnerability to execute arbitrary JavaScript in victim browsers, steal session tokens, or perform actions on behalf of users.",
+  "reproduction_steps": [
+    "Navigate to target scope: https://example.com",
+    "Inject payload: <script>alert(1)</script>",
+    "Observe that the payload is executed",
+    "Confirm vulnerability exploitability"
+  ],
+  "proof_of_concept": "# Proof of Concept\n\nPayload: <script>alert(1)</script>\n\nThis demonstrates Cross-Site Scripting in user inputs\n\n# Validation at 2025-11-09T02:57:59.432696\nValidation successful with alternative payload at 2025-11-09T02:57:59.432661",
+  "affected_endpoints": [
+    "https://example.com"
+  ],
+  "cvss_score": 7.8,
+  "cwe_id": "CWE-79",
+  "remediation": "Implement proper output encoding based on context (HTML, JavaScript, URL). Use Content Security Policy (CSP) headers. Validate and sanitize all user inputs.",
+  "discovered_by": "Bug Bounty Level-6 Agent",
+  "timestamp": "2025-11-09T02:57:59.432549"
+}

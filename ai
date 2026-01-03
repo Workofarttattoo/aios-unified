@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+"""
+Ai:oS Unified Launcher - Natural Language Operating System
+
+Copyright (c) 2025 Joshua Hendricks Cole (DBA: Corporation of Light). All Rights Reserved. PATENT PENDING.
+
+Single command to rule them all: text, voice, or interactive shell.
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from pathlib import Path
+
+# Add parent to path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Ai:oS - Natural Language Operating System",
+        epilog="Examples:\n"
+               "  ai boot system\n"
+               "  ai check network status\n"
+               "  ai --voice\n"
+               "  ai --interactive\n"
+               "  ai help",
+        formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+
+    parser.add_argument(
+        "command",
+        nargs="*",
+        help="Natural language command"
+    )
+    parser.add_argument(
+        "--voice", "-V",
+        action="store_true",
+        help="Enable voice interface"
+    )
+    parser.add_argument(
+        "--interactive", "-i",
+        action="store_true",
+        help="Start interactive shell"
+    )
+    parser.add_argument(
+        "--verbose", "-v",
+        action="store_true",
+        help="Verbose output"
+    )
+    parser.add_argument(
+        "--version",
+        action="store_true",
+        help="Show version"
+    )
+
+    args = parser.parse_args()
+
+    if args.version:
+        print("Ai:oS Natural Language Shell v1.0.0")
+        print("Copyright (c) 2025 Joshua Hendricks Cole")
+        return 0
+
+    # Voice interface
+    if args.voice:
+        try:
+            from voice_interface import VoiceInterface
+            interface = VoiceInterface(verbose=args.verbose)
+            interface.voice_shell()
+            return 0
+        except ImportError as exc:
+            print(f"Error: Voice interface not available: {exc}")
+            print("Install dependencies: pip install SpeechRecognition pyttsx3 pyaudio")
+            return 1
+
+    # Interactive shell
+    if args.interactive or not args.command:
+        from natural_language_shell import NaturalLanguageShell
+        shell = NaturalLanguageShell(verbose=args.verbose)
+        shell.interactive_shell()
+        return 0
+
+    # Single command mode
+    from natural_language_shell import NaturalLanguageShell
+    shell = NaturalLanguageShell(verbose=args.verbose)
+    user_input = " ".join(args.command)
+
+    intents = shell.parse_intent(user_input)
+    if not intents:
+        print("Error: Could not understand command")
+        return 1
+
+    best_intent = intents[0]
+    print(shell.explain_intent(best_intent))
+
+    command = shell.translate_to_command(best_intent)
+    if command:
+        print(f"Command: {command}")
+
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())

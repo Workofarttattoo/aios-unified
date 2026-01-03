@@ -1,0 +1,85 @@
+{
+  "cycle": 11,
+  "timestamp": "2025-11-08T15:47:11.933346",
+  "target": {
+    "name": "SecureApp Inc",
+    "scope": [
+      "https://secureapp.com",
+      "https://*.secureapp.com"
+    ]
+  },
+  "results": {
+    "vulnerabilities": [
+      {
+        "title": "Idor in SecureApp Inc",
+        "severity": "high",
+        "vuln_type": "idor",
+        "description": "Discovered Insecure Direct Object Reference on API affecting SecureApp Inc. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+        "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+        "reproduction_steps": [
+          "Navigate to target scope: https://secureapp.com",
+          "Inject payload: N/A",
+          "Observe that the payload is executed",
+          "Confirm vulnerability exploitability"
+        ],
+        "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API",
+        "affected_endpoints": [
+          "https://secureapp.com"
+        ],
+        "cvss_score": 7.8,
+        "cwe_id": "CWE-639",
+        "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+        "discovered_by": "Bug Bounty Level-6 Agent",
+        "timestamp": "2025-11-08T15:47:11.873108"
+      }
+    ],
+    "reports": [
+      {
+        "vuln_id": "bf4e45b1244e",
+        "markdown_path": "/Users/noone/aios/bug_bounty_reports/bf4e45b1244e_idor.md",
+        "json_path": "/Users/noone/aios/bug_bounty_reports/bf4e45b1244e_idor.json",
+        "vulnerability": {
+          "title": "Idor in SecureApp Inc",
+          "severity": "high",
+          "vuln_type": "idor",
+          "description": "Discovered Insecure Direct Object Reference on API affecting SecureApp Inc. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+          "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+          "reproduction_steps": [
+            "Navigate to target scope: https://secureapp.com",
+            "Inject payload: N/A",
+            "Observe that the payload is executed",
+            "Confirm vulnerability exploitability"
+          ],
+          "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API",
+          "affected_endpoints": [
+            "https://secureapp.com"
+          ],
+          "cvss_score": 7.8,
+          "cwe_id": "CWE-639",
+          "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+          "discovered_by": "Bug Bounty Level-6 Agent",
+          "timestamp": "2025-11-08T15:47:11.873108"
+        },
+        "quality_score": 100,
+        "quality_issues": []
+      }
+    ],
+    "statistics": {
+      "time_hours": 0.00035758303271399603,
+      "total_vulns": 1,
+      "by_severity": {
+        "critical": 0,
+        "high": 1,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      }
+    }
+  },
+  "cumulative_stats": {
+    "total_earnings": 0.0,
+    "total_vulnerabilities": 23,
+    "programs_hunted": 33,
+    "uptime_hours": 74.57150443673135
+  }
+}

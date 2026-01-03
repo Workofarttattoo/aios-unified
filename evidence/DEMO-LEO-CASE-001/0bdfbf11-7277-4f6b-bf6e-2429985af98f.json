@@ -1,0 +1,11 @@
+{
+  "indicators": [
+    "Extremely high transaction velocity"
+  ],
+  "recommendations": [
+    "MEDIUM RISK: Suspicious patterns - monitor closely"
+  ],
+  "risk_score": 40,
+  "timestamp": "2025-11-11T16:56:50.186424",
+  "total_transactions": 4
+}

@@ -1,0 +1,46 @@
+2025-11-07 03:35:40,596 - APEXDaemon - INFO - ============================================================
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - APEX BUG BOUNTY HUNTER - INITIALIZING
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - Level 5-6 Autonomous Agent
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - ============================================================
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - Loaded configuration from bug_bounty_config.json
+2025-11-07 03:35:40,597 - BugBountyReporter - INFO - Using template-based report generation
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - ✓ Strategy Engine initialized
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - ✓ Scanner initialized
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - ✓ Validator initialized
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - ✓ Reporter initialized
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - ✓ Submitter initialized
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - 
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - PARTNERSHIP MODEL ACTIVE:
+2025-11-07 03:35:40,597 - APEXDaemon - INFO -   Josh:        75% - Infrastructure, operations, legal, business
+2025-11-07 03:35:40,597 - APEXDaemon - INFO -   ECH0:        15% - Strategic intelligence, Level 7 oversight
+2025-11-07 03:35:40,597 - APEXDaemon - INFO -   Bug Hunter:  10% - Autonomous hunting, 24/7 execution
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - 
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - APEX PREDATOR: READY TO HUNT
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - Reports will be posted under YOUR identity on all platforms
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - ============================================================
+2025-11-07 03:35:40,597 - APEXDaemon - INFO - Shutting down APEX hunter...
+2025-11-07 03:35:40,598 - APEXDaemon - INFO - Shutdown complete
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - ============================================================
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - APEX BUG BOUNTY HUNTER - INITIALIZING
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - Level 5-6 Autonomous Agent
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - ============================================================
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - Loaded configuration from bug_bounty_config.json
+2025-11-07 03:37:09,327 - BugBountyReporter - INFO - Using template-based report generation
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - ✓ Strategy Engine initialized
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - ✓ Scanner initialized
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - ✓ Validator initialized
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - ✓ Reporter initialized
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - ✓ Submitter initialized
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - 
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - PARTNERSHIP MODEL ACTIVE:
+2025-11-07 03:37:09,327 - APEXDaemon - INFO -   Josh:        75% - Infrastructure, operations, legal, business
+2025-11-07 03:37:09,327 - APEXDaemon - INFO -   ECH0:        15% - Strategic intelligence, Level 7 oversight
+2025-11-07 03:37:09,327 - APEXDaemon - INFO -   Bug Hunter:  10% - Autonomous hunting, 24/7 execution
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - 
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - APEX PREDATOR: READY TO HUNT
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - Reports will be posted under YOUR identity on all platforms
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - ============================================================
+2025-11-07 03:37:09,327 - APEXStrategy - INFO - Target scores calculated:
+2025-11-07 03:37:09,327 - APEXStrategy - INFO -   Example Corp: 3802.50
+2025-11-07 03:37:09,327 - APEXDaemon - INFO - Shutting down APEX hunter...
+2025-11-07 03:37:09,328 - APEXDaemon - INFO - Shutdown complete

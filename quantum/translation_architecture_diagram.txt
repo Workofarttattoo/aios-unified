@@ -1,0 +1,457 @@
+# Quantum Code Translation Architecture Diagram
+
+Copyright (c) 2025 Joshua Hendricks Cole (DBA: Corporation of Light). All Rights Reserved. PATENT PENDING.
+
+================================================================================
+                    CLASSICAL-TO-QUANTUM TRANSLATION PIPELINE
+================================================================================
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│                         INPUT: CLASSICAL ALGORITHM                          │
+│                      (Python, C, pseudocode, spec)                          │
+└─────────────────────────────────┬──────────────────────────────────────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────────┐
+                    │   QUANTUM ADVANTAGE         │
+                    │   PRE-ANALYSIS              │
+                    │                             │
+                    │ • Complexity analysis       │
+                    │ • Structure detection       │
+                    │ • Speedup prediction        │
+                    └──────────┬──────────────────┘
+                               │
+                ┏━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━┓
+                ▼                              ▼
+    ┌───────────────────────┐      ┌─────────────────────────┐
+    │ NO QUANTUM SPEEDUP    │      │ QUANTUM SPEEDUP         │
+    │ (Sorting, Graph BFS)  │      │ (Search, Simulation)    │
+    └───────────┬───────────┘      └──────────┬──────────────┘
+                │                              │
+                ▼                              ▼
+        ┌───────────────┐          ┌──────────────────────────┐
+        │ KEEP CLASSICAL│          │ PROCEED TO TRANSLATION   │
+        │ (No translation)          │                          │
+        └───────────────┘          └──────────┬───────────────┘
+                                              │
+                                              ▼
+                            ┌─────────────────────────────────┐
+                            │   TRANSLATION SYSTEM SELECTOR    │
+                            │                                  │
+                            │ Choose based on:                 │
+                            │ • Algorithm structure            │
+                            │ • Correctness requirements       │
+                            │ • Target hardware               │
+                            │ • Development timeline          │
+                            └──────┬──────────────────────────┘
+                                   │
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ▼                         ▼                          ▼
+┌───────────────┐      ┌─────────────────┐      ┌──────────────────┐
+│   SYSTEM 1    │      │   SYSTEM 2      │      │   SYSTEM 3       │
+│     VRFTP     │      │    QCCDS        │      │     EQCC         │
+│  (Automatic)  │      │  (Human-guided) │      │ (Evolutionary)   │
+└───────┬───────┘      └────────┬────────┘      └────────┬─────────┘
+        │                       │                         │
+        │                       │                         │
+        ▼                       ▼                         ▼
+        │              ┌─────────────────┐              │
+        │              │   SYSTEM 4      │              │
+        │              │    PPSQB        │              │
+        │              │ (Probabilistic) │              │
+        │              └────────┬────────┘              │
+        │                       │                        │
+        └───────────────────────┼────────────────────────┘
+                                │
+                                ▼
+                      ┌──────────────────┐
+                      │   SYSTEM 5       │
+                      │     HDIT         │
+                      │ (Theorem Prover) │
+                      └────────┬─────────┘
+                               │
+                               ▼
+                  ┌────────────────────────────┐
+                  │   QUANTUM CIRCUIT OUTPUT    │
+                  │   (QASM, Quil, Cirq)       │
+                  └─────────────┬──────────────┘
+                                │
+                                ▼
+                  ┌────────────────────────────┐
+                  │    FORMAL VERIFICATION     │
+                  │   (SMT Solver: Z3/CVC5)    │
+                  └─────────────┬──────────────┘
+                                │
+                    ┏━━━━━━━━━━━┻━━━━━━━━━━━┓
+                    ▼                        ▼
+            ┌───────────────┐      ┌─────────────────┐
+            │  VERIFIED ✓   │      │  FAILED ✗       │
+            └───────┬───────┘      └────────┬────────┘
+                    │                       │
+                    │                       ▼
+                    │              ┌─────────────────┐
+                    │              │ RETURN TO       │
+                    │              │ TRANSLATION     │
+                    │              │ (Retry)         │
+                    │              └─────────────────┘
+                    │
+                    ▼
+        ┌──────────────────────────────┐
+        │   HARDWARE COMPILATION       │
+        │                              │
+        │ • Qubit mapping              │
+        │ • Gate decomposition         │
+        │ • Routing (SWAP insertion)   │
+        │ • Optimization               │
+        └──────────────┬───────────────┘
+                       │
+                       ▼
+        ┌──────────────────────────────┐
+        │   TARGET HARDWARE            │
+        │                              │
+        │ • IBM Quantum (supercond.)   │
+        │ • IonQ (trapped ion)         │
+        │ • Rigetti (supercond.)       │
+        │ • Atom Computing (neutral)   │
+        └──────────────┬───────────────┘
+                       │
+                       ▼
+        ┌──────────────────────────────┐
+        │   QUANTUM EXECUTION          │
+        │   (with error mitigation)    │
+        └──────────────┬───────────────┘
+                       │
+                       ▼
+        ┌──────────────────────────────┐
+        │   MEASUREMENT & RESULTS      │
+        └──────────────────────────────┘
+
+================================================================================
+                        DETAILED SYSTEM ARCHITECTURES
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          SYSTEM 1: VRFTP                                    │
+│              (Verified Reversible-First Translation Pipeline)               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    Classical Code (Python)
+            │
+            ▼
+    ┌───────────────────┐
+    │  AST Generation   │
+    └─────────┬─────────┘
+              │
+              ▼
+    ┌────────────────────────────┐
+    │  Reversible IR Generation  │
+    │  • Inline functions        │
+    │  • Unroll loops            │
+    │  • x=expr → x^=expr        │
+    │  • Allocate ancillas       │
+    └─────────┬──────────────────┘
+              │
+              ▼
+    ┌──────────────────────────────┐
+    │  SMT Verification (Stage 1)  │
+    │  Prove: Reversibility        │
+    └─────────┬────────────────────┘
+              │
+              ▼
+    ┌───────────────────────────────┐
+    │  Reversible Circuit Synthesis │
+    │  • Arithmetic → Toffoli nets  │
+    │  • XOR → CNOT chains          │
+    │  • Template matching          │
+    └─────────┬─────────────────────┘
+              │
+              ▼
+    ┌──────────────────────────────┐
+    │  SMT Verification (Stage 2)  │
+    │  Prove: Functional equiv.    │
+    └─────────┬────────────────────┘
+              │
+              ▼
+    ┌────────────────────────────────┐
+    │  Quantum Circuit Generation    │
+    │  • Toffoli → 6 CNOT + 7 T     │
+    │  • Fredkin decomposition       │
+    │  • Gate set: {H, T, CNOT}     │
+    └─────────┬──────────────────────┘
+              │
+              ▼
+    ┌──────────────────────────────┐
+    │  SMT Verification (Stage 3)  │
+    │  Prove: Unitary equiv.       │
+    └─────────┬────────────────────┘
+              │
+              ▼
+    ┌────────────────────────────────┐
+    │  Peephole Optimization         │
+    │  • Cancel H·H, CNOT·CNOT      │
+    │  • Merge Rz rotations          │
+    │  • Commute independent gates   │
+    └─────────┬──────────────────────┘
+              │
+              ▼
+        Verified Circuit
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          SYSTEM 2: QCCDS                                    │
+│            (Quantum-Classical Co-Design Synthesis)                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    Classical Algorithm + Performance Profile
+            │
+            ▼
+    ┌────────────────────────────────┐
+    │  AI Subroutine Analyzer (GNN)  │
+    │  Input: Control-flow graph     │
+    │  Output: Ranked list with      │
+    │          quantum-readiness     │
+    │          scores                │
+    └─────────┬──────────────────────┘
+              │
+              ▼
+    ┌────────────────────────────────┐
+    │  Human Review & Selection      │
+    │  • Validate proposals          │
+    │  • Provide domain knowledge    │
+    │  • Accept/reject subroutines   │
+    └─────────┬──────────────────────┘
+              │
+              ▼
+    ┌────────────────────────────────────┐
+    │  Hybrid Circuit Synthesizer        │
+    │  ┌──────────────────────────────┐  │
+    │  │ LLM Initial Generation       │  │
+    │  │ (Fine-tuned on quantum code) │  │
+    │  └─────────┬────────────────────┘  │
+    │            │                        │
+    │            ▼                        │
+    │  ┌──────────────────────────────┐  │
+    │  │ RL Refinement Agent          │  │
+    │  │ Reward: Fidelity - gates     │  │
+    │  └─────────┬────────────────────┘  │
+    │            │                        │
+    │            ▼                        │
+    │  ┌──────────────────────────────┐  │
+    │  │ SMT Verifier                 │  │
+    │  │ Check correctness on tests   │  │
+    │  └─────────┬────────────────────┘  │
+    │            │                        │
+    │            ▼                        │
+    │     ┌─────────────┐                │
+    │     │ Verified?   │                │
+    │     └──┬──────┬───┘                │
+    │        │ Yes  │ No → Retry          │
+    │        │      └─────┐               │
+    │        ▼            │               │
+    └────────┼────────────┘               │
+             │                            │
+             ▼                            │
+    ┌────────────────────────────────┐   │
+    │  Human Circuit Review          │◄──┘
+    │  • Inspect synthesized circuit │
+    │  • Suggest optimizations       │
+    │  • Approve or reject           │
+    └─────────┬──────────────────────┘
+              │
+              ▼
+    ┌────────────────────────────────┐
+    │  Hybrid Classical-Quantum      │
+    │  Program Assembly              │
+    │  • Interface code              │
+    │  • Parameter passing           │
+    │  • Batching quantum calls      │
+    └─────────┬──────────────────────┘
+              │
+              ▼
+        Hybrid Program
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          SYSTEM 3: EQCC                                     │
+│            (Evolutionary Quantum Circuit Compiler)                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    Function Specification + Test Cases
+            │
+            ▼
+    ┌────────────────────────────────┐
+    │  Initialize Populations        │
+    │  • P_circuits = random gates   │
+    │  • P_tests = random I/O pairs  │
+    └─────────┬──────────────────────┘
+              │
+              ▼
+    ╔═════════════════════════════╗
+    ║  EVOLUTIONARY LOOP          ║
+    ║  (Repeat until convergence) ║
+    ╚════════════┬════════════════╝
+                 │
+        ┌────────┴────────┐
+        │                 │
+        ▼                 ▼
+┌───────────────┐   ┌──────────────────┐
+│ Evolve        │   │ Co-evolve Tests  │
+│ Circuits      │   │                  │
+│               │   │ Diversity score: │
+│ Fitness:      │   │ How well test    │
+│ Correctness   │   │ distinguishes    │
+│ - gate_count  │   │ good from bad    │
+│ - depth       │   │ circuits         │
+│               │   │                  │
+│ • Selection   │   │ • Selection      │
+│ • Crossover   │   │ • Mutation       │
+│ • Mutation    │   │ • New tests      │
+└───────┬───────┘   └────────┬─────────┘
+        │                    │
+        └────────┬───────────┘
+                 │
+                 ▼
+        ┌────────────────┐
+        │ Fitness Plateau│
+        │ or Max Gen?    │
+        └───┬────────┬───┘
+            │ Yes    │ No
+            │        └──────┐
+            │               │
+            ▼               │
+    ┌──────────────┐        │
+    │ Best Circuit │        │
+    └───────┬──────┘        │
+            │               │
+            ▼               │
+    ┌──────────────────┐    │
+    │ SMT Verification │    │
+    │ (Post-Evolution) │    │
+    └───────┬──────────┘    │
+            │               │
+            ▼               │
+        Verified?◄──────────┘
+         │  │
+     Yes │  │ No → Reject
+         ▼  │
+    Output  └─→ Evolution failed
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        SYSTEM COMPARISON MATRIX                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────┬──────────┬────────────┬────────────┬────────────┬─────────────┐
+│ System   │ Soundness│ Scalability│ Automation │ Quality    │ Timeline    │
+├──────────┼──────────┼────────────┼────────────┼────────────┼─────────────┤
+│ VRFTP    │ ✓✓✓      │ ●●○○       │ ✓✓✓        │ ●●●○       │ 3-4 years   │
+│          │ SMT      │ n≤10       │ Fully auto │ Template-  │             │
+│          │ verified │ qubits     │            │ optimized  │             │
+├──────────┼──────────┼────────────┼────────────┼────────────┼─────────────┤
+│ QCCDS    │ ✓✓       │ ●●●●       │ ✓○○        │ ●●●●       │ 3-4 years   │
+│          │ Human +  │ High       │ Semi-auto  │ Expert-    │             │
+│          │ AI       │ (hybrid)   │ (H-in-loop)│ guided     │             │
+├──────────┼──────────┼────────────┼────────────┼────────────┼─────────────┤
+│ EQCC     │ ○○○      │ ●○○○       │ ✓✓✓        │ ●●○○       │ 2-3 years   │
+│          │ Must     │ n≤8        │ Fully auto │ Variable   │             │
+│          │ verify   │ qubits     │            │ (may novel)│             │
+├──────────┼──────────┼────────────┼────────────┼────────────┼─────────────┤
+│ PPSQB    │ ✓○○      │ ●●○○       │ ✓✓✓        │ ●●●○       │ 3-4 years   │
+│          │ Prob.    │ n≤10       │ Fully auto │ Gradient-  │             │
+│          │ (high)   │ qubits     │            │ optimized  │             │
+├──────────┼──────────┼────────────┼────────────┼────────────┼─────────────┤
+│ HDIT     │ ✓✓✓✓     │ ●●○○       │ ✓✓○        │ ●●●●       │ 4-5 years   │
+│          │ Coq      │ ≤100 LOC   │ Semi-auto  │ Neural-    │             │
+│          │ proof    │ functions  │ (tactics)  │ optimized  │             │
+└──────────┴──────────┴────────────┴────────────┴────────────┴─────────────┘
+
+Legend:
+  ✓ = Has property   ● = Capability level   ○ = Lacks property
+
+================================================================================
+                        TRANSLATION CHALLENGES MAP
+================================================================================
+
+                      CLASSICAL ALGORITHM PROPERTIES
+                                   │
+                                   │
+        ┌──────────────────────────┼──────────────────────────┐
+        │                          │                          │
+        ▼                          ▼                          ▼
+    ┌────────┐              ┌─────────────┐           ┌──────────┐
+    │ Search │              │ Simulation  │           │ Sorting  │
+    │ Unstr. │              │ Quantum Sys.│           │ Comp-    │
+    │        │              │             │           │ based    │
+    └────┬───┘              └──────┬──────┘           └────┬─────┘
+         │                         │                       │
+         │ ✓ Grover              │ ✓ Hamiltonian         │ ✗ No speedup
+         │ O(√N) speedup          │ Exp. speedup          │ Ω(N log N)
+         │                         │                       │
+         ▼                         ▼                       ▼
+    Easy translation       Medium translation      Impossible
+    (oracle synthesis)     (Trotterization)        (provably)
+
+                      TRANSLATION BARRIER TYPES
+
+    ┌─────────────┐      ┌──────────────┐      ┌──────────────┐
+    │Irreversibility     │ Branching    │      │ QRAM Access  │
+    │             │      │              │      │              │
+    │ AND gate    │      │ if-then-else │      │ arr[index]   │
+    │ loses info  │      │ collapses    │      │ in superposi.│
+    └──────┬──────┘      └──────┬───────┘      └──────┬───────┘
+           │                    │                     │
+           ▼                    ▼                     ▼
+    ┌──────────────┐    ┌──────────────┐     ┌──────────────┐
+    │ Solution:    │    │ Solution:    │     │ Workaround:  │
+    │ Toffoli gate │    │ Controlled   │     │ Amplitude    │
+    │ + ancilla    │    │ execution of │     │ encoding     │
+    │              │    │ both branches│     │ (limited)    │
+    └──────────────┘    └──────────────┘     └──────────────┘
+
+================================================================================
+                         REVERSIBLE COMPUTING BRIDGE
+================================================================================
+
+        Classical Computing
+                │
+                │ (Make reversible via Bennett's trick)
+                │
+                ▼
+        ┌────────────────────┐
+        │ Reversible         │
+        │ Computing          │
+        │                    │
+        │ • Toffoli gates    │
+        │ • Fredkin gates    │
+        │ • CNOT gates       │
+        │                    │
+        │ Guarantees:        │
+        │ • Bijective        │
+        │ • Info-preserving  │
+        │ • Polynomial space │
+        └──────────┬─────────┘
+                   │
+                   │ (Add superposition)
+                   │
+                   ▼
+        ┌────────────────────┐
+        │ Quantum Computing  │
+        │                    │
+        │ Reversible         │
+        │ + Superposition    │
+        │ + Entanglement     │
+        │ + Interference     │
+        │                    │
+        │ Enables:           │
+        │ • Amplitude amp.   │
+        │ • Phase estimation │
+        │ • Quantum speedup  │
+        └────────────────────┘
+
+================================================================================
+
+Copyright (c) 2025 Joshua Hendricks Cole (DBA: Corporation of Light).
+All Rights Reserved. PATENT PENDING.
+
+For full technical details, see:
+  quantum_code_translation_research.md (50+ pages)
+  quantum_translation_executive_summary.md (15 pages)
+
+Websites: thegavl.com | aios.is

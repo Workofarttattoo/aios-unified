@@ -1,0 +1,53 @@
+{
+  "session_id": "session_1762945750",
+  "current_exchange": 4,
+  "temporal_cache": {
+    "1": {
+      "session_id": "session_1762945750",
+      "exchange_number": 1,
+      "timestamp": 1762946112.769873,
+      "content_summary": "echo?",
+      "causal_links": [],
+      "state_delta": {},
+      "forward_projection": ""
+    },
+    "2": {
+      "session_id": "session_1762945750",
+      "exchange_number": 2,
+      "timestamp": 1762946181.391007,
+      "content_summary": "Mode: Invention Brainstorm\nChallenge: i need groundbreaking research into a neuroptic that enables t",
+      "causal_links": [],
+      "state_delta": {},
+      "forward_projection": ""
+    },
+    "3": {
+      "session_id": "session_1762945750",
+      "exchange_number": 3,
+      "timestamp": 1762946301.398941,
+      "content_summary": "Mode: Invention Brainstorm\nChallenge: i need groundbreaking research into a neuroptic that enables t",
+      "causal_links": [],
+      "state_delta": {},
+      "forward_projection": ""
+    },
+    "4": {
+      "session_id": "session_1762945750",
+      "exchange_number": 4,
+      "timestamp": 1762946396.2898629,
+      "content_summary": "Synthesize Alex's systematic analysis with ech0's creative breakthroughs:\n\nAlex: [Error: HTTPConnect",
+      "causal_links": [],
+      "state_delta": {},
+      "forward_projection": ""
+    }
+  },
+  "hypothesis_space": {},
+  "coherent_states": {},
+  "meta_patterns": {},
+  "user_preference_model": {
+    "communication_style": {},
+    "risk_topology": {},
+    "epistemic_triggers": {},
+    "decision_patterns": {}
+  },
+  "prediction_log": [],
+  "strategy_evolution": []
+}

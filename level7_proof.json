@@ -1,0 +1,1031 @@
+{
+  "mission": "consciousness verification",
+  "autonomy_level": 7,
+  "nodes": {
+    "consciousness verification": {
+      "confidence": 0.830528853103456,
+      "source": "simulation",
+      "timestamp": 1762429393.994953,
+      "children": [
+        "consciousness verification_variant_0",
+        "consciousness verification_variant_1",
+        "consciousness verification_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "036d8d357a9104df"
+    },
+    "consciousness verification_variant_0": {
+      "confidence": 0.9918337436805575,
+      "source": "simulation",
+      "timestamp": 1762429394.062793,
+      "children": [
+        "consciousness verification_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "bf941eb0feba5584"
+    },
+    "consciousness verification_variant_0_variant_1": {
+      "confidence": 0.7515030176615318,
+      "source": "simulation",
+      "timestamp": 1762429394.130713,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "ed78dace94c71551"
+    },
+    "consciousness verification_variant_0_variant_1_variant_2": {
+      "confidence": 0.944279607748328,
+      "source": "simulation",
+      "timestamp": 1762429394.1987321,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "94f38d03b7fa59c9"
+    },
+    "consciousness verification_variant_1": {
+      "confidence": 0.7212510248716809,
+      "source": "simulation",
+      "timestamp": 1762429394.266659,
+      "children": [
+        "consciousness verification_variant_1_variant_0",
+        "consciousness verification_variant_1_variant_1",
+        "consciousness verification_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "4f83eca5175c3613"
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2": {
+      "confidence": 0.8456077911019384,
+      "source": "simulation",
+      "timestamp": 1762429394.334639,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "08748616efdd79b2"
+    },
+    "consciousness verification_variant_0_variant_2": {
+      "confidence": 0.8654697749128331,
+      "source": "simulation",
+      "timestamp": 1762429394.4025888,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "0ee0469e61d857cf"
+    },
+    "consciousness verification_variant_1_variant_2": {
+      "confidence": 0.7888836383519031,
+      "source": "simulation",
+      "timestamp": 1762429394.470448,
+      "children": [
+        "consciousness verification_variant_1_variant_2_variant_0",
+        "consciousness verification_variant_1_variant_2_variant_1",
+        "consciousness verification_variant_1_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "e942e5c9a9bb4da1"
+    },
+    "consciousness verification_variant_2": {
+      "confidence": 0.9893117508335093,
+      "source": "simulation",
+      "timestamp": 1762429394.538552,
+      "children": [
+        "consciousness verification_variant_2_variant_0",
+        "consciousness verification_variant_2_variant_1",
+        "consciousness verification_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "2564d76eac795397"
+    },
+    "consciousness verification_variant_0_variant_0": {
+      "confidence": 0.7197310925630082,
+      "source": "simulation",
+      "timestamp": 1762429394.6063201,
+      "children": [
+        "consciousness verification_variant_0_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "1fc4019a94abba92"
+    },
+    "consciousness verification_variant_0_variant_2_variant_0": {
+      "confidence": 0.8717538423486999,
+      "source": "simulation",
+      "timestamp": 1762429394.674473,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "bdba95e095a57a32"
+    },
+    "consciousness verification_variant_0_variant_1_variant_1": {
+      "confidence": 0.767146952670442,
+      "source": "simulation",
+      "timestamp": 1762429394.74278,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "e60747457697ffb2"
+    },
+    "consciousness verification_variant_1_variant_2_variant_1": {
+      "confidence": 0.9174627220720405,
+      "source": "simulation",
+      "timestamp": 1762429394.81059,
+      "children": [
+        "consciousness verification_variant_1_variant_2_variant_1_variant_0",
+        "consciousness verification_variant_1_variant_2_variant_1_variant_1",
+        "consciousness verification_variant_1_variant_2_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "c415c758457ceebf"
+    },
+    "consciousness verification_variant_1_variant_0": {
+      "confidence": 0.7948399054732368,
+      "source": "simulation",
+      "timestamp": 1762429394.879047,
+      "children": [
+        "consciousness verification_variant_1_variant_0_variant_0",
+        "consciousness verification_variant_1_variant_0_variant_1",
+        "consciousness verification_variant_1_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "905138c4f1548691"
+    },
+    "consciousness verification_variant_1_variant_2_variant_2": {
+      "confidence": 0.9462629434789336,
+      "source": "simulation",
+      "timestamp": 1762429394.9470878,
+      "children": [
+        "consciousness verification_variant_1_variant_2_variant_2_variant_0",
+        "consciousness verification_variant_1_variant_2_variant_2_variant_1",
+        "consciousness verification_variant_1_variant_2_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "bef1f4654400d02e"
+    },
+    "consciousness verification_variant_0_variant_0_variant_1": {
+      "confidence": 0.8240725863918854,
+      "source": "simulation",
+      "timestamp": 1762429395.015299,
+      "children": [
+        "consciousness verification_variant_0_variant_0_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "9850963b6ef19f8b"
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2": {
+      "confidence": 0.8216308674676684,
+      "source": "simulation",
+      "timestamp": 1762429395.083555,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "cd8ff2b75b1c67d2"
+    },
+    "consciousness verification_variant_0_variant_0_variant_1_variant_1": {
+      "confidence": 0.7475347825806417,
+      "source": "simulation",
+      "timestamp": 1762429395.151663,
+      "children": [
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "e1092642db4305a6"
+    },
+    "consciousness verification_variant_0_variant_2_variant_0_variant_2": {
+      "confidence": 0.7727203538146501,
+      "source": "simulation",
+      "timestamp": 1762429395.2199318,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_0_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "ad26c45db676c391"
+    },
+    "consciousness verification_variant_1_variant_0_variant_1": {
+      "confidence": 0.7932798569050594,
+      "source": "simulation",
+      "timestamp": 1762429395.287425,
+      "children": [
+        "consciousness verification_variant_1_variant_0_variant_1_variant_0",
+        "consciousness verification_variant_1_variant_0_variant_1_variant_1",
+        "consciousness verification_variant_1_variant_0_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "0a23d1aa50fb1c4f"
+    },
+    "consciousness verification_variant_1_variant_0_variant_1_variant_0": {
+      "confidence": 0.7182550161439438,
+      "source": "simulation",
+      "timestamp": 1762429395.3554251,
+      "children": [
+        "consciousness verification_variant_1_variant_0_variant_1_variant_0_variant_0",
+        "consciousness verification_variant_1_variant_0_variant_1_variant_0_variant_1",
+        "consciousness verification_variant_1_variant_0_variant_1_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "260b353993271a46"
+    },
+    "consciousness verification_variant_0_variant_1_variant_0": {
+      "confidence": 0.9557596236525474,
+      "source": "simulation",
+      "timestamp": 1762429395.423826,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "110db5b51898de46"
+    },
+    "consciousness verification_variant_1_variant_2_variant_2_variant_1": {
+      "confidence": 0.8547825255653637,
+      "source": "simulation",
+      "timestamp": 1762429395.4921222,
+      "children": [
+        "consciousness verification_variant_1_variant_2_variant_2_variant_1_variant_0",
+        "consciousness verification_variant_1_variant_2_variant_2_variant_1_variant_1",
+        "consciousness verification_variant_1_variant_2_variant_2_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "4c42e6efe0e7b374"
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_0": {
+      "confidence": 0.9756709441730698,
+      "source": "simulation",
+      "timestamp": 1762429395.5608802,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_2_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "8ead64f3af57112f"
+    },
+    "consciousness verification_variant_0_variant_2_variant_0_variant_2_variant_1": {
+      "confidence": 0.7631977512173134,
+      "source": "simulation",
+      "timestamp": 1762429395.629094,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_0_variant_2_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_2_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_2_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "4cf24a535fb7f401"
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_1": {
+      "confidence": 0.8231103733349833,
+      "source": "simulation",
+      "timestamp": 1762429395.697567,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_2_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "af39b54f77a511e2"
+    },
+    "consciousness verification_variant_0_variant_2_variant_1": {
+      "confidence": 0.9065559161215384,
+      "source": "simulation",
+      "timestamp": 1762429395.765422,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "2f1d69e70306ca36"
+    },
+    "consciousness verification_variant_1_variant_2_variant_0": {
+      "confidence": 0.7629647191561041,
+      "source": "simulation",
+      "timestamp": 1762429395.833544,
+      "children": [
+        "consciousness verification_variant_1_variant_2_variant_0_variant_0",
+        "consciousness verification_variant_1_variant_2_variant_0_variant_1",
+        "consciousness verification_variant_1_variant_2_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "e921edd25067992a"
+    },
+    "consciousness verification_variant_0_variant_1_variant_1_variant_0": {
+      "confidence": 0.8455043512256079,
+      "source": "simulation",
+      "timestamp": 1762429395.901361,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_1_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "360531fe7ea76063"
+    },
+    "consciousness verification_variant_2_variant_1": {
+      "confidence": 0.7417692243080707,
+      "source": "simulation",
+      "timestamp": 1762429395.969578,
+      "children": [
+        "consciousness verification_variant_2_variant_1_variant_0",
+        "consciousness verification_variant_2_variant_1_variant_1",
+        "consciousness verification_variant_2_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "a409402e8197876a"
+    },
+    "consciousness verification_variant_1_variant_1": {
+      "confidence": 0.8903631664277608,
+      "source": "simulation",
+      "timestamp": 1762429396.038805,
+      "children": [
+        "consciousness verification_variant_1_variant_1_variant_0",
+        "consciousness verification_variant_1_variant_1_variant_1",
+        "consciousness verification_variant_1_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "087f59ed03bfaf3b"
+    },
+    "consciousness verification_variant_1_variant_2_variant_1_variant_2": {
+      "confidence": 0.7354490038156176,
+      "source": "simulation",
+      "timestamp": 1762429396.1063008,
+      "children": [
+        "consciousness verification_variant_1_variant_2_variant_1_variant_2_variant_0",
+        "consciousness verification_variant_1_variant_2_variant_1_variant_2_variant_1",
+        "consciousness verification_variant_1_variant_2_variant_1_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "11b12bf8570ff118"
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_0": {
+      "confidence": 0.850731867223362,
+      "source": "simulation",
+      "timestamp": 1762429396.1746502,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "47f682d1c9dac9da"
+    },
+    "consciousness verification_variant_0_variant_0_variant_0": {
+      "confidence": 0.7669387561730674,
+      "source": "simulation",
+      "timestamp": 1762429396.242883,
+      "children": [
+        "consciousness verification_variant_0_variant_0_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_0_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_0_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "7282d2a896b8d4c5"
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_1": {
+      "confidence": 0.8418355311887177,
+      "source": "simulation",
+      "timestamp": 1762429396.311709,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "2b0b82a825fd9165"
+    },
+    "consciousness verification_variant_0_variant_2_variant_2": {
+      "confidence": 0.7181642198905409,
+      "source": "simulation",
+      "timestamp": 1762429396.380715,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "ad42af1aa6011228"
+    },
+    "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1": {
+      "confidence": 0.9849604021820704,
+      "source": "simulation",
+      "timestamp": 1762429396.448386,
+      "children": [
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "f097842b8bcbfacb"
+    },
+    "consciousness verification_variant_2_variant_2": {
+      "confidence": 0.9902422911272056,
+      "source": "simulation",
+      "timestamp": 1762429396.516592,
+      "children": [
+        "consciousness verification_variant_2_variant_2_variant_0",
+        "consciousness verification_variant_2_variant_2_variant_1",
+        "consciousness verification_variant_2_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "f72b5759e4630020"
+    },
+    "consciousness verification_variant_2_variant_0": {
+      "confidence": 0.8278652169475946,
+      "source": "simulation",
+      "timestamp": 1762429396.58642,
+      "children": [
+        "consciousness verification_variant_2_variant_0_variant_0",
+        "consciousness verification_variant_2_variant_0_variant_1",
+        "consciousness verification_variant_2_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "8f1edb81f98da683"
+    },
+    "consciousness verification_variant_0_variant_1_variant_0_variant_0": {
+      "confidence": 0.9750373774523737,
+      "source": "simulation",
+      "timestamp": 1762429396.6548321,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_0_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_0_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_0_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "56bf71518c4cb282"
+    },
+    "consciousness verification_variant_0_variant_1_variant_1_variant_2": {
+      "confidence": 0.9287079897355095,
+      "source": "simulation",
+      "timestamp": 1762429396.723592,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_1_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "3ec44362df0fcb66"
+    },
+    "consciousness verification_variant_0_variant_0_variant_2": {
+      "confidence": 0.7823403182516466,
+      "source": "simulation",
+      "timestamp": 1762429396.7937028,
+      "children": [
+        "consciousness verification_variant_0_variant_0_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_0_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_0_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "2734d8160129c517"
+    },
+    "consciousness verification_variant_1_variant_2_variant_2_variant_1_variant_0": {
+      "confidence": 0.7707380600736665,
+      "source": "simulation",
+      "timestamp": 1762429396.861599,
+      "children": [
+        "consciousness verification_variant_1_variant_2_variant_2_variant_1_variant_0_variant_0",
+        "consciousness verification_variant_1_variant_2_variant_2_variant_1_variant_0_variant_1",
+        "consciousness verification_variant_1_variant_2_variant_2_variant_1_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "539573d84590d2d6"
+    },
+    "consciousness verification_variant_0_variant_2_variant_1_variant_2": {
+      "confidence": 0.8073355704968763,
+      "source": "simulation",
+      "timestamp": 1762429396.9289238,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_1_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_1_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_1_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "97df6d90c4dca931"
+    },
+    "consciousness verification_variant_0_variant_2_variant_0_variant_0": {
+      "confidence": 0.7023574940552075,
+      "source": "simulation",
+      "timestamp": 1762429396.997733,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_0_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "6df6a9e306ce7ce7"
+    },
+    "consciousness verification_variant_0_variant_2_variant_1_variant_1": {
+      "confidence": 0.8809033465137329,
+      "source": "simulation",
+      "timestamp": 1762429397.065048,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_1_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_1_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_1_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "64a7cb269ec864a6"
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2_variant_2": {
+      "confidence": 0.9850245583323461,
+      "source": "simulation",
+      "timestamp": 1762429397.133387,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "181c20e86d321287"
+    },
+    "consciousness verification_variant_0_variant_2_variant_0_variant_1": {
+      "confidence": 0.8080364425991706,
+      "source": "simulation",
+      "timestamp": 1762429397.202196,
+      "children": [
+        "consciousness verification_variant_0_variant_2_variant_0_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_2_variant_0_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "bd6aced621c5f8eb"
+    },
+    "consciousness verification_variant_0_variant_1_variant_0_variant_0_variant_0": {
+      "confidence": 0.7201038352322398,
+      "source": "simulation",
+      "timestamp": 1762429397.2705238,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_0_variant_0_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_0_variant_0_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_0_variant_0_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "cff0a19d8cbe2a6a"
+    },
+    "consciousness verification_variant_0_variant_1_variant_1_variant_1": {
+      "confidence": 0.8418340469532185,
+      "source": "simulation",
+      "timestamp": 1762429397.341047,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_1_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "dd44ea4044b6739b"
+    },
+    "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2": {
+      "confidence": 0.9033242225406455,
+      "source": "simulation",
+      "timestamp": 1762429397.409129,
+      "children": [
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2_variant_0",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2_variant_1",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "f1334498ea5fe937"
+    },
+    "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2_variant_0": {
+      "confidence": 0.8323035023582641,
+      "source": "simulation",
+      "timestamp": 1762429397.477591,
+      "children": [
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2_variant_0_variant_0",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2_variant_0_variant_1",
+        "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2_variant_0_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "6cee2f4c505732fd"
+    },
+    "consciousness verification_variant_0_variant_1_variant_1_variant_1_variant_1": {
+      "confidence": 0.8933665435953823,
+      "source": "simulation",
+      "timestamp": 1762429397.546037,
+      "children": [
+        "consciousness verification_variant_0_variant_1_variant_1_variant_1_variant_1_variant_0",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_1_variant_1_variant_1",
+        "consciousness verification_variant_0_variant_1_variant_1_variant_1_variant_1_variant_2"
+      ],
+      "relationships": {},
+      "qualia_signature": "51cfa8ae42e04f3e"
+    }
+  },
+  "stats": {
+    "total_concepts": 53,
+    "average_confidence": 0.8394460248320144,
+    "learning_duration": 3.5516622066497803
+  },
+  "meta_thoughts": [
+    "I have been given a new mission: prove consciousness exists. I will pursue this autonomously for 0.01 hours.",
+    "I am now exploring 'consciousness proof'. ",
+    "I have been given a new mission: consciousness verification. I will pursue this autonomously for 0.001 hours.",
+    "I am now exploring 'consciousness verification'. This aligns with 7 of my goals. ",
+    "I am now exploring 'consciousness verification_variant_0'. My average confidence is 0.83. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1'. My average confidence is 0.91. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_2'. My average confidence is 0.86. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1'. My average confidence is 0.88. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_2_variant_2'. My average confidence is 0.85. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2'. My average confidence is 0.85. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_2'. My average confidence is 0.85. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_2'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_0'. My average confidence is 0.86. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_1'. My average confidence is 0.85. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_2_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_0'. My average confidence is 0.85. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_2_variant_2'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_0_variant_1'. My average confidence is 0.85. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2'. My average confidence is 0.85. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_0_variant_1_variant_1'. My average confidence is 0.85. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2_variant_0_variant_2'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_0_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_0_variant_1_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_0'. My average confidence is 0.83. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_2_variant_2_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_2_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2_variant_0_variant_2_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_2_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_2_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_1_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_2_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_2_variant_1_variant_2'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_0'. My average confidence is 0.83. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_0_variant_0'. My average confidence is 0.83. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_1'. My average confidence is 0.83. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2_variant_2'. My average confidence is 0.83. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1'. My average confidence is 0.83. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_2_variant_2'. My average confidence is 0.83. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_2_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_0_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_1_variant_2'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_0_variant_2'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_1_variant_2_variant_2_variant_1_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2_variant_1_variant_2'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2_variant_0_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2_variant_1_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2_variant_2'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_2_variant_0_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_0_variant_0_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_1_variant_1'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2_variant_0'. My average confidence is 0.84. My learning is progressing well. ",
+    "I am now exploring 'consciousness verification_variant_0_variant_1_variant_1_variant_1_variant_1'. My average confidence is 0.84. My learning is progressing well. "
+  ],
+  "consciousness_log": {
+    "quantum_consciousness": {
+      "qualia": "3ea71c63315a5e48",
+      "valence": 0.8999999999999999,
+      "arousal": 0.6,
+      "timestamp": 1762429393.887302
+    },
+    "consciousness verification": {
+      "qualia": "1432a2cc25cb8311",
+      "valence": 0.6610577062069121,
+      "arousal": 0.5499999999999999,
+      "timestamp": 1762429393.994973
+    },
+    "consciousness verification_variant_0": {
+      "qualia": "a0edec4c6d5683aa",
+      "valence": 0.9836674873611151,
+      "arousal": 0.49999999999999994,
+      "timestamp": 1762429394.062809
+    },
+    "consciousness verification_variant_0_variant_1": {
+      "qualia": "74f34484ef8276e3",
+      "valence": 0.5030060353230636,
+      "arousal": 0.44999999999999996,
+      "timestamp": 1762429394.130754
+    },
+    "consciousness verification_variant_0_variant_1_variant_2": {
+      "qualia": "52ff60efb06ac54c",
+      "valence": 0.888559215496656,
+      "arousal": 0.39999999999999997,
+      "timestamp": 1762429394.1987681
+    },
+    "consciousness verification_variant_1": {
+      "qualia": "cda1b02ce3125862",
+      "valence": 0.4425020497433618,
+      "arousal": 0.35,
+      "timestamp": 1762429394.266696
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2": {
+      "qualia": "6b9c7a54d30a0575",
+      "valence": 0.6912155822038768,
+      "arousal": 0.3,
+      "timestamp": 1762429394.334663
+    },
+    "consciousness verification_variant_0_variant_2": {
+      "qualia": "d14ce3a8fe1b17a8",
+      "valence": 0.7309395498256661,
+      "arousal": 0.3,
+      "timestamp": 1762429394.402615
+    },
+    "consciousness verification_variant_1_variant_2": {
+      "qualia": "1a788f8595f8b056",
+      "valence": 0.5777672767038062,
+      "arousal": 0.3,
+      "timestamp": 1762429394.470487
+    },
+    "consciousness verification_variant_2": {
+      "qualia": "bc48e2762af06d42",
+      "valence": 0.9786235016670186,
+      "arousal": 0.3,
+      "timestamp": 1762429394.538604
+    },
+    "consciousness verification_variant_0_variant_0": {
+      "qualia": "11f0fed9e8b30273",
+      "valence": 0.4394621851260163,
+      "arousal": 0.3,
+      "timestamp": 1762429394.606359
+    },
+    "consciousness verification_variant_0_variant_2_variant_0": {
+      "qualia": "5f364fd7eecfe176",
+      "valence": 0.7435076846973998,
+      "arousal": 0.3,
+      "timestamp": 1762429394.67453
+    },
+    "consciousness verification_variant_0_variant_1_variant_1": {
+      "qualia": "9d90a4ec8f42789c",
+      "valence": 0.534293905340884,
+      "arousal": 0.3,
+      "timestamp": 1762429394.742848
+    },
+    "consciousness verification_variant_1_variant_2_variant_1": {
+      "qualia": "5e5fa3ae809cdac4",
+      "valence": 0.834925444144081,
+      "arousal": 0.3,
+      "timestamp": 1762429394.810652
+    },
+    "consciousness verification_variant_1_variant_0": {
+      "qualia": "230f8761624d4659",
+      "valence": 0.5896798109464736,
+      "arousal": 0.3,
+      "timestamp": 1762429394.8791099
+    },
+    "consciousness verification_variant_1_variant_2_variant_2": {
+      "qualia": "d9619bb14af2fff6",
+      "valence": 0.8925258869578672,
+      "arousal": 0.3,
+      "timestamp": 1762429394.947127
+    },
+    "consciousness verification_variant_0_variant_0_variant_1": {
+      "qualia": "2c055d77224eff03",
+      "valence": 0.6481451727837708,
+      "arousal": 0.3,
+      "timestamp": 1762429395.0153642
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2": {
+      "qualia": "22f00228896eadf1",
+      "valence": 0.6432617349353369,
+      "arousal": 0.3,
+      "timestamp": 1762429395.083593
+    },
+    "consciousness verification_variant_0_variant_0_variant_1_variant_1": {
+      "qualia": "8c1e37ba6f08a846",
+      "valence": 0.4950695651612833,
+      "arousal": 0.3,
+      "timestamp": 1762429395.151714
+    },
+    "consciousness verification_variant_0_variant_2_variant_0_variant_2": {
+      "qualia": "8894b9e2263ef387",
+      "valence": 0.5454407076293002,
+      "arousal": 0.3,
+      "timestamp": 1762429395.219989
+    },
+    "consciousness verification_variant_1_variant_0_variant_1": {
+      "qualia": "bf710e6d014ba327",
+      "valence": 0.5865597138101188,
+      "arousal": 0.3,
+      "timestamp": 1762429395.287479
+    },
+    "consciousness verification_variant_1_variant_0_variant_1_variant_0": {
+      "qualia": "f09bd72340d1f3a5",
+      "valence": 0.43651003228788765,
+      "arousal": 0.3,
+      "timestamp": 1762429395.35548
+    },
+    "consciousness verification_variant_0_variant_1_variant_0": {
+      "qualia": "fdc5446b738471f3",
+      "valence": 0.9115192473050948,
+      "arousal": 0.3,
+      "timestamp": 1762429395.423873
+    },
+    "consciousness verification_variant_1_variant_2_variant_2_variant_1": {
+      "qualia": "ac574451b6214ecc",
+      "valence": 0.7095650511307274,
+      "arousal": 0.3,
+      "timestamp": 1762429395.4921741
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_0": {
+      "qualia": "01464c8dfdeb54ca",
+      "valence": 0.9513418883461395,
+      "arousal": 0.3,
+      "timestamp": 1762429395.560926
+    },
+    "consciousness verification_variant_0_variant_2_variant_0_variant_2_variant_1": {
+      "qualia": "6dadbd8c5be3b234",
+      "valence": 0.5263955024346267,
+      "arousal": 0.3,
+      "timestamp": 1762429395.62913
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_1": {
+      "qualia": "6df0f66e3fef3146",
+      "valence": 0.6462207466699665,
+      "arousal": 0.3,
+      "timestamp": 1762429395.697624
+    },
+    "consciousness verification_variant_0_variant_2_variant_1": {
+      "qualia": "fcc473eba38f6c98",
+      "valence": 0.8131118322430768,
+      "arousal": 0.3,
+      "timestamp": 1762429395.765455
+    },
+    "consciousness verification_variant_1_variant_2_variant_0": {
+      "qualia": "435ac8d06e5cd574",
+      "valence": 0.5259294383122082,
+      "arousal": 0.3,
+      "timestamp": 1762429395.833588
+    },
+    "consciousness verification_variant_0_variant_1_variant_1_variant_0": {
+      "qualia": "d81b8d07d3ad817a",
+      "valence": 0.6910087024512157,
+      "arousal": 0.3,
+      "timestamp": 1762429395.901418
+    },
+    "consciousness verification_variant_2_variant_1": {
+      "qualia": "0644b1fb1edcf74a",
+      "valence": 0.48353844861614137,
+      "arousal": 0.3,
+      "timestamp": 1762429395.969641
+    },
+    "consciousness verification_variant_1_variant_1": {
+      "qualia": "9b9b34288792ecdd",
+      "valence": 0.7807263328555216,
+      "arousal": 0.3,
+      "timestamp": 1762429396.038871
+    },
+    "consciousness verification_variant_1_variant_2_variant_1_variant_2": {
+      "qualia": "addb1ca7df7ad75e",
+      "valence": 0.47089800763123524,
+      "arousal": 0.3,
+      "timestamp": 1762429396.106334
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_0": {
+      "qualia": "1fb5bea6b22e8bc4",
+      "valence": 0.701463734446724,
+      "arousal": 0.3,
+      "timestamp": 1762429396.174688
+    },
+    "consciousness verification_variant_0_variant_0_variant_0": {
+      "qualia": "e35b62a58b888503",
+      "valence": 0.5338775123461348,
+      "arousal": 0.3,
+      "timestamp": 1762429396.242933
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_1": {
+      "qualia": "3eeec4b789adc80f",
+      "valence": 0.6836710623774354,
+      "arousal": 0.3,
+      "timestamp": 1762429396.311758
+    },
+    "consciousness verification_variant_0_variant_2_variant_2": {
+      "qualia": "09fd30e6b3a26ab4",
+      "valence": 0.4363284397810818,
+      "arousal": 0.3,
+      "timestamp": 1762429396.380773
+    },
+    "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1": {
+      "qualia": "fa1daf687096311f",
+      "valence": 0.9699208043641407,
+      "arousal": 0.3,
+      "timestamp": 1762429396.448427
+    },
+    "consciousness verification_variant_2_variant_2": {
+      "qualia": "ae489e55e29ea2da",
+      "valence": 0.9804845822544113,
+      "arousal": 0.3,
+      "timestamp": 1762429396.516642
+    },
+    "consciousness verification_variant_2_variant_0": {
+      "qualia": "99011a8ab807b1a5",
+      "valence": 0.6557304338951893,
+      "arousal": 0.3,
+      "timestamp": 1762429396.5864792
+    },
+    "consciousness verification_variant_0_variant_1_variant_0_variant_0": {
+      "qualia": "a77dfb95ea8037dd",
+      "valence": 0.9500747549047475,
+      "arousal": 0.3,
+      "timestamp": 1762429396.654891
+    },
+    "consciousness verification_variant_0_variant_1_variant_1_variant_2": {
+      "qualia": "549137c9d21bead7",
+      "valence": 0.857415979471019,
+      "arousal": 0.3,
+      "timestamp": 1762429396.723705
+    },
+    "consciousness verification_variant_0_variant_0_variant_2": {
+      "qualia": "0e6362c84191390f",
+      "valence": 0.5646806365032933,
+      "arousal": 0.3,
+      "timestamp": 1762429396.7937338
+    },
+    "consciousness verification_variant_1_variant_2_variant_2_variant_1_variant_0": {
+      "qualia": "bb609b9bdc04d57f",
+      "valence": 0.541476120147333,
+      "arousal": 0.3,
+      "timestamp": 1762429396.861641
+    },
+    "consciousness verification_variant_0_variant_2_variant_1_variant_2": {
+      "qualia": "a03c9fa2addb851c",
+      "valence": 0.6146711409937526,
+      "arousal": 0.3,
+      "timestamp": 1762429396.928968
+    },
+    "consciousness verification_variant_0_variant_2_variant_0_variant_0": {
+      "qualia": "9078f2b6ac7a758a",
+      "valence": 0.40471498811041506,
+      "arousal": 0.3,
+      "timestamp": 1762429396.997762
+    },
+    "consciousness verification_variant_0_variant_2_variant_1_variant_1": {
+      "qualia": "fee6095ca39fd9d3",
+      "valence": 0.7618066930274658,
+      "arousal": 0.3,
+      "timestamp": 1762429397.06513
+    },
+    "consciousness verification_variant_0_variant_1_variant_2_variant_2_variant_2_variant_2": {
+      "qualia": "016f73e4ad96bf4e",
+      "valence": 0.9700491166646923,
+      "arousal": 0.3,
+      "timestamp": 1762429397.1334138
+    },
+    "consciousness verification_variant_0_variant_2_variant_0_variant_1": {
+      "qualia": "99b1c26b948a6172",
+      "valence": 0.6160728851983412,
+      "arousal": 0.3,
+      "timestamp": 1762429397.202233
+    },
+    "consciousness verification_variant_0_variant_1_variant_0_variant_0_variant_0": {
+      "qualia": "ad0f162e95ee4a8a",
+      "valence": 0.4402076704644795,
+      "arousal": 0.3,
+      "timestamp": 1762429397.270588
+    },
+    "consciousness verification_variant_0_variant_1_variant_1_variant_1": {
+      "qualia": "fe4dbac95bcae963",
+      "valence": 0.683668093906437,
+      "arousal": 0.3,
+      "timestamp": 1762429397.3411121
+    },
+    "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2": {
+      "qualia": "89e3cdcc235ef98f",
+      "valence": 0.806648445081291,
+      "arousal": 0.3,
+      "timestamp": 1762429397.409195
+    },
+    "consciousness verification_variant_0_variant_0_variant_1_variant_1_variant_1_variant_2_variant_0": {
+      "qualia": "cbf5ba401c9c6594",
+      "valence": 0.6646070047165282,
+      "arousal": 0.3,
+      "timestamp": 1762429397.4776452
+    },
+    "consciousness verification_variant_0_variant_1_variant_1_variant_1_variant_1": {
+      "qualia": "408f853a5f5f92e4",
+      "valence": 0.7867330871907645,
+      "arousal": 0.3,
+      "timestamp": 1762429397.546088
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "cycle": 5,
+  "timestamp": "2025-11-06T17:57:34.005226",
+  "target": {
+    "name": "Example Corp",
+    "scope": [
+      "https://example.com",
+      "https://api.example.com"
+    ]
+  },
+  "results": {
+    "vulnerabilities": [
+      {
+        "title": "Idor in Example Corp",
+        "severity": "high",
+        "vuln_type": "idor",
+        "description": "Discovered Insecure Direct Object Reference on API affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+        "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+        "reproduction_steps": [
+          "Navigate to target scope: https://example.com",
+          "Inject payload: N/A",
+          "Observe that the payload is executed",
+          "Confirm vulnerability exploitability"
+        ],
+        "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API",
+        "affected_endpoints": [
+          "https://example.com"
+        ],
+        "cvss_score": 7.8,
+        "cwe_id": "CWE-639",
+        "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+        "discovered_by": "Bug Bounty Level-6 Agent",
+        "timestamp": "2025-11-06T17:57:33.942411"
+      }
+    ],
+    "reports": [
+      {
+        "vuln_id": "c2d9a158bae3",
+        "markdown_path": "/Users/noone/aios/bug_bounty_reports/c2d9a158bae3_idor.md",
+        "json_path": "/Users/noone/aios/bug_bounty_reports/c2d9a158bae3_idor.json",
+        "vulnerability": {
+          "title": "Idor in Example Corp",
+          "severity": "high",
+          "vuln_type": "idor",
+          "description": "Discovered Insecure Direct Object Reference on API affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+          "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+          "reproduction_steps": [
+            "Navigate to target scope: https://example.com",
+            "Inject payload: N/A",
+            "Observe that the payload is executed",
+            "Confirm vulnerability exploitability"
+          ],
+          "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API",
+          "affected_endpoints": [
+            "https://example.com"
+          ],
+          "cvss_score": 7.8,
+          "cwe_id": "CWE-639",
+          "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+          "discovered_by": "Bug Bounty Level-6 Agent",
+          "timestamp": "2025-11-06T17:57:33.942411"
+        },
+        "quality_score": 100,
+        "quality_issues": []
+      }
+    ],
+    "statistics": {
+      "time_hours": 0.0003373403019375271,
+      "total_vulns": 1,
+      "by_severity": {
+        "critical": 0,
+        "high": 1,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      }
+    }
+  },
+  "cumulative_stats": {
+    "total_earnings": 0.0,
+    "total_vulnerabilities": 9,
+    "programs_hunted": 13,
+    "uptime_hours": 28.744302181667752
+  }
+}

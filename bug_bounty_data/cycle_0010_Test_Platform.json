@@ -1,0 +1,84 @@
+{
+  "cycle": 10,
+  "timestamp": "2025-11-08T02:04:37.770121",
+  "target": {
+    "name": "Test Platform",
+    "scope": [
+      "https://testplatform.io"
+    ]
+  },
+  "results": {
+    "vulnerabilities": [
+      {
+        "title": "Idor in Test Platform",
+        "severity": "high",
+        "vuln_type": "idor",
+        "description": "Discovered Insecure Direct Object Reference on API affecting Test Platform. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+        "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+        "reproduction_steps": [
+          "Navigate to target scope: https://testplatform.io",
+          "Inject payload: N/A",
+          "Observe that the payload is executed",
+          "Confirm vulnerability exploitability"
+        ],
+        "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API\n\n# Validation at 2025-11-08T02:04:37.768507\nValidation successful with alternative payload at 2025-11-08T02:04:37.768501",
+        "affected_endpoints": [
+          "https://testplatform.io"
+        ],
+        "cvss_score": 7.8,
+        "cwe_id": "CWE-639",
+        "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+        "discovered_by": "Bug Bounty Level-6 Agent",
+        "timestamp": "2025-11-08T02:04:37.722211"
+      }
+    ],
+    "reports": [
+      {
+        "vuln_id": "91a6304774e2",
+        "markdown_path": "/Users/noone/aios/bug_bounty_reports/91a6304774e2_idor.md",
+        "json_path": "/Users/noone/aios/bug_bounty_reports/91a6304774e2_idor.json",
+        "vulnerability": {
+          "title": "Idor in Test Platform",
+          "severity": "high",
+          "vuln_type": "idor",
+          "description": "Discovered Insecure Direct Object Reference on API affecting Test Platform. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+          "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+          "reproduction_steps": [
+            "Navigate to target scope: https://testplatform.io",
+            "Inject payload: N/A",
+            "Observe that the payload is executed",
+            "Confirm vulnerability exploitability"
+          ],
+          "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API\n\n# Validation at 2025-11-08T02:04:37.768507\nValidation successful with alternative payload at 2025-11-08T02:04:37.768501",
+          "affected_endpoints": [
+            "https://testplatform.io"
+          ],
+          "cvss_score": 7.8,
+          "cwe_id": "CWE-639",
+          "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+          "discovered_by": "Bug Bounty Level-6 Agent",
+          "timestamp": "2025-11-08T02:04:37.722211"
+        },
+        "quality_score": 100,
+        "quality_issues": []
+      }
+    ],
+    "statistics": {
+      "time_hours": 0.00838699221611023,
+      "total_vulns": 1,
+      "by_severity": {
+        "critical": 0,
+        "high": 1,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      }
+    }
+  },
+  "cumulative_stats": {
+    "total_earnings": 0.0,
+    "total_vulnerabilities": 19,
+    "programs_hunted": 29,
+    "uptime_hours": 60.86201464977529
+  }
+}

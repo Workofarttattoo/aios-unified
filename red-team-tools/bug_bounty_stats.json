@@ -1,0 +1,14 @@
+{
+  "total_scans": 0,
+  "total_findings": 0,
+  "total_validated": 0,
+  "total_submitted": 0,
+  "total_accepted": 0,
+  "total_revenue": 0.0,
+  "partnership_revenue": {
+    "josh": 0.0,
+    "ech0": 0.0,
+    "bug_hunter": 0.0
+  },
+  "updated_at": "2025-11-07T03:37:09.328014"
+}

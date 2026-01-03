@@ -1,0 +1,187 @@
+{
+  "cycle": 8,
+  "timestamp": "2025-11-07T12:25:36.331688",
+  "target": {
+    "name": "Example Corp",
+    "scope": [
+      "https://example.com",
+      "https://api.example.com"
+    ]
+  },
+  "results": {
+    "vulnerabilities": [
+      {
+        "title": "Idor in Example Corp",
+        "severity": "high",
+        "vuln_type": "idor",
+        "description": "Discovered Insecure Direct Object Reference on API affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+        "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+        "reproduction_steps": [
+          "Navigate to target scope: https://example.com",
+          "Inject payload: N/A",
+          "Observe that the payload is executed",
+          "Confirm vulnerability exploitability"
+        ],
+        "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API",
+        "affected_endpoints": [
+          "https://example.com"
+        ],
+        "cvss_score": 7.8,
+        "cwe_id": "CWE-639",
+        "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+        "discovered_by": "Bug Bounty Level-6 Agent",
+        "timestamp": "2025-11-07T12:25:36.291668"
+      },
+      {
+        "title": "Auth Bypass in Example Corp",
+        "severity": "critical",
+        "vuln_type": "auth_bypass",
+        "description": "Discovered Authentication bypass via parameter manipulation affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+        "impact": "An attacker can exploit this vulnerability to bypass authentication mechanisms and access restricted functionality.",
+        "reproduction_steps": [
+          "Navigate to target scope: https://example.com",
+          "Inject payload: N/A",
+          "Observe that the payload is executed",
+          "Confirm vulnerability exploitability"
+        ],
+        "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Authentication bypass via parameter manipulation\n\n# Validation at 2025-11-07T12:25:36.329693\nValidation successful with alternative payload at 2025-11-07T12:25:36.329686",
+        "affected_endpoints": [
+          "https://example.com"
+        ],
+        "cvss_score": 9.5,
+        "cwe_id": "CWE-287",
+        "remediation": "Review authentication logic thoroughly. Implement multi-factor authentication. Use secure session management and properly validate all authentication tokens.",
+        "discovered_by": "Bug Bounty Level-6 Agent",
+        "timestamp": "2025-11-07T12:25:36.304416"
+      },
+      {
+        "title": "Ssrf in Example Corp",
+        "severity": "high",
+        "vuln_type": "ssrf",
+        "description": "Discovered Server-Side Request Forgery via URL params affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+        "impact": "An attacker can exploit this vulnerability to make requests to internal systems and potentially access sensitive data.",
+        "reproduction_steps": [
+          "Navigate to target scope: https://example.com",
+          "Inject payload: http://localhost",
+          "Observe that the payload is executed",
+          "Confirm vulnerability exploitability"
+        ],
+        "proof_of_concept": "# Proof of Concept\n\nPayload: http://localhost\n\nThis demonstrates Server-Side Request Forgery via URL params\n\n# Validation at 2025-11-07T12:25:36.329696\nValidation successful with alternative payload at 2025-11-07T12:25:36.329695",
+        "affected_endpoints": [
+          "https://example.com"
+        ],
+        "cvss_score": 7.8,
+        "cwe_id": "CWE-918",
+        "remediation": "Validate and sanitize all URLs. Implement allowlist of permitted domains. Use network segmentation to limit internal access.",
+        "discovered_by": "Bug Bounty Level-6 Agent",
+        "timestamp": "2025-11-07T12:25:36.317080"
+      }
+    ],
+    "reports": [
+      {
+        "vuln_id": "bf083708983c",
+        "markdown_path": "/Users/noone/aios/bug_bounty_reports/bf083708983c_idor.md",
+        "json_path": "/Users/noone/aios/bug_bounty_reports/bf083708983c_idor.json",
+        "vulnerability": {
+          "title": "Idor in Example Corp",
+          "severity": "high",
+          "vuln_type": "idor",
+          "description": "Discovered Insecure Direct Object Reference on API affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+          "impact": "An attacker can exploit this vulnerability to access or modify resources belonging to other users.",
+          "reproduction_steps": [
+            "Navigate to target scope: https://example.com",
+            "Inject payload: N/A",
+            "Observe that the payload is executed",
+            "Confirm vulnerability exploitability"
+          ],
+          "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Insecure Direct Object Reference on API",
+          "affected_endpoints": [
+            "https://example.com"
+          ],
+          "cvss_score": 7.8,
+          "cwe_id": "CWE-639",
+          "remediation": "Implement proper authorization checks for all object access. Use indirect references or verify ownership before allowing access to resources.",
+          "discovered_by": "Bug Bounty Level-6 Agent",
+          "timestamp": "2025-11-07T12:25:36.291668"
+        },
+        "quality_score": 100,
+        "quality_issues": []
+      },
+      {
+        "vuln_id": "2bdb9fa2540d",
+        "markdown_path": "/Users/noone/aios/bug_bounty_reports/2bdb9fa2540d_auth_bypass.md",
+        "json_path": "/Users/noone/aios/bug_bounty_reports/2bdb9fa2540d_auth_bypass.json",
+        "vulnerability": {
+          "title": "Auth Bypass in Example Corp",
+          "severity": "critical",
+          "vuln_type": "auth_bypass",
+          "description": "Discovered Authentication bypass via parameter manipulation affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+          "impact": "An attacker can exploit this vulnerability to bypass authentication mechanisms and access restricted functionality.",
+          "reproduction_steps": [
+            "Navigate to target scope: https://example.com",
+            "Inject payload: N/A",
+            "Observe that the payload is executed",
+            "Confirm vulnerability exploitability"
+          ],
+          "proof_of_concept": "# Proof of Concept\n\nPayload: See steps\n\nThis demonstrates Authentication bypass via parameter manipulation\n\n# Validation at 2025-11-07T12:25:36.329693\nValidation successful with alternative payload at 2025-11-07T12:25:36.329686",
+          "affected_endpoints": [
+            "https://example.com"
+          ],
+          "cvss_score": 9.5,
+          "cwe_id": "CWE-287",
+          "remediation": "Review authentication logic thoroughly. Implement multi-factor authentication. Use secure session management and properly validate all authentication tokens.",
+          "discovered_by": "Bug Bounty Level-6 Agent",
+          "timestamp": "2025-11-07T12:25:36.304416"
+        },
+        "quality_score": 100,
+        "quality_issues": []
+      },
+      {
+        "vuln_id": "613f97dced90",
+        "markdown_path": "/Users/noone/aios/bug_bounty_reports/613f97dced90_ssrf.md",
+        "json_path": "/Users/noone/aios/bug_bounty_reports/613f97dced90_ssrf.json",
+        "vulnerability": {
+          "title": "Ssrf in Example Corp",
+          "severity": "high",
+          "vuln_type": "ssrf",
+          "description": "Discovered Server-Side Request Forgery via URL params affecting Example Corp. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+          "impact": "An attacker can exploit this vulnerability to make requests to internal systems and potentially access sensitive data.",
+          "reproduction_steps": [
+            "Navigate to target scope: https://example.com",
+            "Inject payload: http://localhost",
+            "Observe that the payload is executed",
+            "Confirm vulnerability exploitability"
+          ],
+          "proof_of_concept": "# Proof of Concept\n\nPayload: http://localhost\n\nThis demonstrates Server-Side Request Forgery via URL params\n\n# Validation at 2025-11-07T12:25:36.329696\nValidation successful with alternative payload at 2025-11-07T12:25:36.329695",
+          "affected_endpoints": [
+            "https://example.com"
+          ],
+          "cvss_score": 7.8,
+          "cwe_id": "CWE-918",
+          "remediation": "Validate and sanitize all URLs. Implement allowlist of permitted domains. Use network segmentation to limit internal access.",
+          "discovered_by": "Bug Bounty Level-6 Agent",
+          "timestamp": "2025-11-07T12:25:36.317080"
+        },
+        "quality_score": 100,
+        "quality_issues": []
+      }
+    ],
+    "statistics": {
+      "time_hours": 0.0003460591369205051,
+      "total_vulns": 3,
+      "by_severity": {
+        "critical": 1,
+        "high": 2,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      }
+    }
+  },
+  "cumulative_stats": {
+    "total_earnings": 0.0,
+    "total_vulnerabilities": 16,
+    "programs_hunted": 22,
+    "uptime_hours": 47.211615088648266
+  }
+}

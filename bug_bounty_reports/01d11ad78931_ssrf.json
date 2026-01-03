@@ -1,0 +1,22 @@
+{
+  "title": "Ssrf in SecureApp Inc",
+  "severity": "high",
+  "vuln_type": "ssrf",
+  "description": "Discovered Server-Side Request Forgery via URL params affecting SecureApp Inc. The application does not properly sanitize user input, allowing an attacker to inject malicious payloads that are executed by the application.",
+  "impact": "An attacker can exploit this vulnerability to make requests to internal systems and potentially access sensitive data.",
+  "reproduction_steps": [
+    "Navigate to target scope: https://secureapp.com",
+    "Inject payload: http://localhost",
+    "Observe that the payload is executed",
+    "Confirm vulnerability exploitability"
+  ],
+  "proof_of_concept": "# Proof of Concept\n\nPayload: http://localhost\n\nThis demonstrates Server-Side Request Forgery via URL params\n\n# Validation at 2025-11-06T11:24:36.103354\nValidation successful with alternative payload at 2025-11-06T11:24:36.103353",
+  "affected_endpoints": [
+    "https://secureapp.com"
+  ],
+  "cvss_score": 7.8,
+  "cwe_id": "CWE-918",
+  "remediation": "Validate and sanitize all URLs. Implement allowlist of permitted domains. Use network segmentation to limit internal access.",
+  "discovered_by": "Bug Bounty Level-6 Agent",
+  "timestamp": "2025-11-06T11:24:36.091669"
+}

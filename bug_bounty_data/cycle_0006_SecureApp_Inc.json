@@ -1,0 +1,32 @@
+{
+  "cycle": 6,
+  "timestamp": "2025-11-07T00:25:43.373663",
+  "target": {
+    "name": "SecureApp Inc",
+    "scope": [
+      "https://secureapp.com",
+      "https://*.secureapp.com"
+    ]
+  },
+  "results": {
+    "vulnerabilities": [],
+    "reports": [],
+    "statistics": {
+      "time_hours": 0.0003783261113696628,
+      "total_vulns": 0,
+      "by_severity": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      }
+    }
+  },
+  "cumulative_stats": {
+    "total_earnings": 0.0,
+    "total_vulnerabilities": 10,
+    "programs_hunted": 18,
+    "uptime_hours": 35.213571187588904
+  }
+}

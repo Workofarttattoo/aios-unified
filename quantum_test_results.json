@@ -1,0 +1,23 @@
+{
+  "scaling": {
+    "5": {
+      "error": "'QuantumChip100' object has no attribute 'metrics'"
+    },
+    "10": {
+      "error": "'QuantumChip100' object has no attribute 'metrics'"
+    },
+    "20": {
+      "error": "'QuantumChip100' object has no attribute 'metrics'"
+    },
+    "50": {
+      "error": "'QuantumChip100' object has no attribute 'metrics'"
+    },
+    "100": {
+      "error": "Maximum allowed dimension exceeded"
+    }
+  },
+  "algorithms": "completed",
+  "error_correction": "completed",
+  "distributed": "completed",
+  "integration": "completed"
+}

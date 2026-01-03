@@ -1,0 +1,32 @@
+{
+  "partnership_split": {
+    "josh": 0.75,
+    "ech0": 0.15,
+    "bug_hunter": 0.1
+  },
+  "total_revenue": 0.0,
+  "partnership_revenue": {
+    "josh": 0.0,
+    "ech0": 0.0,
+    "bug_hunter": 0.0
+  },
+  "total_payments": 0,
+  "updated_at": "2025-11-07T03:35:40.597576",
+  "partnership_model": {
+    "josh": {
+      "share": "75%",
+      "role": "Infrastructure, operations, legal, business strategy",
+      "revenue": 0.0
+    },
+    "ech0": {
+      "share": "15%",
+      "role": "Strategic intelligence, Level 7 oversight, report generation",
+      "revenue": 0.0
+    },
+    "bug_hunter": {
+      "share": "10%",
+      "role": "Autonomous hunting, 24/7 discovery, validation",
+      "revenue": 0.0
+    }
+  }
+}

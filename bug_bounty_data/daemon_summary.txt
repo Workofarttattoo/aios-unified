@@ -1,0 +1,30 @@
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                     📊 DAEMON SUMMARY                                ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+⏱️  Uptime: 6.0 days (144.9 hours)
+🎯 Programs Hunted: 63
+🐛 Total Vulnerabilities: 42
+💰 Estimated Earnings: $0.00
+
+📈 Rates:
+   • Vulnerabilities/Day: 7.0
+   • Earnings/Day: $0.00
+   • Earnings/Hour: $0.00
+
+💵 Recent Earnings (Last 10):
+   2025-11-10T19:13:20 | SecureApp Inc                  | $    0.00
+   2025-11-11T01:55:06 | Example Corp                   | $    0.00
+   2025-11-11T01:55:36 | Test Platform                  | $    0.00
+   2025-11-11T01:55:37 | SecureApp Inc                  | $    0.00
+   2025-11-11T07:55:44 | Example Corp                   | $    0.00
+   2025-11-11T07:56:14 | Test Platform                  | $    0.00
+   2025-11-11T07:56:16 | SecureApp Inc                  | $    0.00
+   2025-11-11T14:04:09 | Example Corp                   | $    0.00
+   2025-11-11T14:04:39 | Test Platform                  | $    0.00
+   2025-11-11T14:04:40 | SecureApp Inc                  | $    0.00
+
+📁 Data Directory: /Users/noone/aios/bug_bounty_data
+
+Generated: 2025-11-11T14:04:40.706242

@@ -1,0 +1,134 @@
+{
+  "scan_interval_seconds": 3600,
+  "hunting_mode": "balanced",
+  "monthly_revenue_target": 5000,
+  "min_hourly_rate": 50,
+  "auto_submit": false,
+  "max_concurrent_scans": 2,
+  "retry_limit": 10,
+  "timeout": 10,
+  "validation_attempts": 3,
+  
+  "ech0_endpoint": "",
+  "ech0_api_key": "",
+  
+  "aios_endpoint": "https://red-team-tools.aios.is",
+  "aios_api_key": "",
+  
+  "targets": [
+    {
+      "url": "https://wordpress.com/?s=test&id=123",
+      "program_name": "Automattic",
+      "platforms": ["hackerone"],
+      "min_bounty": 150,
+      "max_bounty": 2000,
+      "avg_bounty": 800,
+      "response_time_days": 7.0,
+      "acceptance_rate": 0.65,
+      "difficulty": "medium"
+    },
+    {
+      "url": "https://gitlab.com/search?search=test&id=123",
+      "program_name": "GitLab",
+      "platforms": ["hackerone"],
+      "min_bounty": 300,
+      "max_bounty": 29000,
+      "avg_bounty": 1500,
+      "response_time_days": 7.0,
+      "acceptance_rate": 0.55,
+      "difficulty": "medium"
+    },
+    {
+      "url": "https://newrelic.com/search?q=test&id=123",
+      "program_name": "New Relic",
+      "platforms": ["bugcrowd"],
+      "min_bounty": 100,
+      "max_bounty": 5000,
+      "avg_bounty": 700,
+      "response_time_days": 6.0,
+      "acceptance_rate": 0.70,
+      "difficulty": "medium"
+    },
+    {
+      "url": "https://www.cloudflare.com/search/?q=test&id=123",
+      "program_name": "Cloudflare",
+      "platforms": ["hackerone"],
+      "min_bounty": 500,
+      "max_bounty": 10000,
+      "avg_bounty": 1200,
+      "response_time_days": 10.0,
+      "acceptance_rate": 0.50,
+      "difficulty": "hard"
+    },
+    {
+      "url": "https://www.dropbox.com/search?q=test&id=123",
+      "program_name": "Dropbox",
+      "platforms": ["hackerone"],
+      "min_bounty": 250,
+      "max_bounty": 15000,
+      "avg_bounty": 1200,
+      "response_time_days": 8.0,
+      "acceptance_rate": 0.50,
+      "difficulty": "hard"
+    }
+  ],
+  
+  "platforms": {
+    "hackerone": {
+      "enabled": false,
+      "api_token": "YOUR_HACKERONE_TOKEN",
+      "username": "YOUR_USERNAME",
+      "program_handle": "program-name",
+      "comment": "Get token from: https://hackerone.com/settings/api_token/edit"
+    },
+    "bugcrowd": {
+      "enabled": false,
+      "api_token": "YOUR_BUGCROWD_TOKEN",
+      "program_code": "program-code",
+      "comment": "Get token from: https://bugcrowd.com/user/api"
+    },
+    "intigriti": {
+      "enabled": false,
+      "api_token": "",
+      "comment": "European platform, good for GDPR compliance"
+    },
+    "yeswehack": {
+      "enabled": false,
+      "api_token": "",
+      "comment": "French platform, growing fast"
+    },
+    "hackenproof": {
+      "enabled": false,
+      "api_token": "",
+      "comment": "Blockchain/crypto focus"
+    },
+    "aios": {
+      "enabled": true,
+      "api_endpoint": "https://red-team-tools.aios.is",
+      "api_key": "YOUR_AIOS_API_KEY",
+      "comment": "Your sovereign security platform"
+    }
+  },
+  
+  "scan_types": {
+    "xss": true,
+    "sqli": true,
+    "ssrf": true,
+    "idor": true,
+    "auth_bypass": true,
+    "csrf": true,
+    "xxe": false,
+    "rce": false,
+    "sensitive_data_exposure": true,
+    "comment": "Enable/disable specific vulnerability types"
+  },
+  
+  "_comments": {
+    "hunting_mode": "Options: fast_cash, balanced, big_game, ip_gen",
+    "scan_interval_seconds": "Time between scans (3600 = 1 hour)",
+    "auto_submit": "WARNING: Only enable after testing validation",
+    "monthly_revenue_target": "Used for strategy adaptation (in USD)",
+    "min_hourly_rate": "Minimum acceptable $/hour for persistence"
+  }
+}
+

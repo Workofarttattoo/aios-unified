@@ -1,0 +1,32 @@
+{
+  "cycle": 6,
+  "timestamp": "2025-11-07T00:25:11.815757",
+  "target": {
+    "name": "Example Corp",
+    "scope": [
+      "https://example.com",
+      "https://api.example.com"
+    ]
+  },
+  "results": {
+    "vulnerabilities": [],
+    "reports": [],
+    "statistics": {
+      "time_hours": 0.0003713049491246541,
+      "total_vulns": 0,
+      "by_severity": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      }
+    }
+  },
+  "cumulative_stats": {
+    "total_earnings": 0.0,
+    "total_vulnerabilities": 10,
+    "programs_hunted": 16,
+    "uptime_hours": 35.20480510248078
+  }
+}

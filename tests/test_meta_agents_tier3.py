@@ -1,3 +1,4 @@
+from pathlib import Path
 #!/usr/bin/env python3
 """
 Comprehensive unit tests for Tier 3: Meta-Agents System Integration
@@ -35,7 +36,7 @@ import time
 # Load agents/system.py directly due to package init issues
 def load_system_agents():
     spec = importlib.util.spec_from_file_location(
-        "agents.system", "/Users/noone/aios/agents/system.py"
+        "agents.system", str(Path(__file__).resolve().parent.parent / "agents" / "system.py")
     )
     module = importlib.util.module_from_spec(spec)
     try:

@@ -25,7 +25,7 @@ from dataclasses import asdict
 
 # Load diagnostics module directly to avoid aios/__init__.py import issues
 _spec = importlib.util.spec_from_file_location(
-    "diagnostics", "/Users/noone/aios/diagnostics.py"
+    "diagnostics", str(Path(__file__).resolve().parent.parent / "diagnostics.py")
 )
 _diagnostics = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_diagnostics)
@@ -232,7 +232,7 @@ class TestSystemStatus(unittest.TestCase):
             python_version="3.11.0",
             platform_name="Darwin",
             platform_version="23.0.0",
-            working_directory="/Users/noone",
+            working_directory=str(Path(__file__).resolve().parent.parent),
             aios_version=VersionInfo(1, 0, 0)
         )
         self.assertEqual(status.python_version, "3.11.0")
@@ -246,7 +246,7 @@ class TestSystemStatus(unittest.TestCase):
             python_version="3.11.0",
             platform_name="Darwin",
             platform_version="23.0.0",
-            working_directory="/Users/noone",
+            working_directory=str(Path(__file__).resolve().parent.parent),
             aios_version=VersionInfo(1, 0, 0),
             meta_agents=[
                 SubsystemInfo(
@@ -271,7 +271,7 @@ class TestSystemStatus(unittest.TestCase):
             python_version="3.11.0",
             platform_name="Darwin",
             platform_version="23.0.0",
-            working_directory="/Users/noone",
+            working_directory=str(Path(__file__).resolve().parent.parent),
             aios_version=VersionInfo(1, 0, 0)
         )
         d = status.to_dict()
@@ -285,7 +285,7 @@ class TestSystemStatus(unittest.TestCase):
             python_version="3.11.0",
             platform_name="Darwin",
             platform_version="23.0.0",
-            working_directory="/Users/noone",
+            working_directory=str(Path(__file__).resolve().parent.parent),
             aios_version=VersionInfo(1, 0, 0),
             security_tools=[
                 SecurityToolInfo("AuroraScan", "desc", "reconnaissance", "tools/"),

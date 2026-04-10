@@ -18,8 +18,10 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 import sys
 
-# Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+# Ensure repo root is importable
+_root = str(Path(__file__).resolve().parent)
+if _root not in sys.path:
+    sys.path.insert(0, _root)
 
 from config import Manifest, load_manifest
 try:

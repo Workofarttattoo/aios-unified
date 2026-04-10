@@ -1,0 +1,40 @@
+# ──────────────────────────────────────────────────────────────────────
+# Ai:oS Unified — Docker Compose (development / staging)
+# ──────────────────────────────────────────────────────────────────────
+#
+# Usage:
+#   cp .env.example .env   # fill in secrets
+#   docker compose up -d
+#   docker compose logs -f aios
+# ──────────────────────────────────────────────────────────────────────
+
+version: "3.9"
+
+services:
+  aios:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aios-unified
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "${PORT:-8080}:8080"
+    volumes:
+      - aios-data:/app/data
+      - aios-logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "from aios.config import DISPLAY_NAME; print(DISPLAY_NAME)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+          cpus: "2.0"
+
+volumes:
+  aios-data:
+  aios-logs:

@@ -9,6 +9,14 @@ converges on the new layout.
 
 from __future__ import annotations
 
-from . import virtualization
+try:
+    from . import virtualization  # noqa: F401
+except ImportError:
+    # When loaded outside a package context (e.g. pytest collection), the
+    # relative import is not available — fall back to an absolute import.
+    try:
+        import virtualization  # noqa: F401
+    except ImportError:
+        virtualization = None  # type: ignore[assignment]
 
 __all__ = ["virtualization"]

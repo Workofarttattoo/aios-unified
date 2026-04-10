@@ -1,7 +1,4 @@
 {
-    "valid_keys": [
-        "secret-key-1",
-        "secret-key-2",
-        "dev-key"
-    ]
+    "valid_keys": [],
+    "_note": "Populate via environment variables. Do NOT commit real keys."
 }

@@ -1,4 +1,4 @@
-# Python
+# ── Python ──────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
@@ -7,28 +7,52 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+*.egg
 
-# macOS
+# ── Virtual environments ────────────────────────────────────────────
+.env
+.venv/
+venv/
+env/
+
+# ── macOS ───────────────────────────────────────────────────────────
 .DS_Store
 .AppleDouble
 .LSOverride
+._*
 
-# IDE
+# ── IDE ─────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# Environment
-.env
-.venv
-venv/
-
-# Private files
+# ── Secrets & credentials ──────────────────────────────────────────
 .private/
 *-key.pem
 *.key
+*.pem
+api_keys.json
 
-# Frontend artifacts
+# ── Docker ──────────────────────────────────────────────────────────
+docker-compose.override.yml
+
+# ── Logs & runtime artefacts ────────────────────────────────────────
+*.log
+*.pid
+*.db
+*.tmp
+
+# ── Test / coverage ─────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ── Frontend artefacts ──────────────────────────────────────────────
+node_modules/
 qulab/frontend/node_modules/
 qulab/frontend/dist/
+QuLabInfinite/agent_lab/frontend/node_modules/

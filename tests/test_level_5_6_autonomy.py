@@ -1,3 +1,4 @@
+from pathlib import Path
 """
 Comprehensive test suite for Level 5-6 autonomous agent implementations.
 
@@ -19,7 +20,7 @@ from typing import Dict, Any
 
 # Import autonomous discovery system
 import sys
-sys.path.insert(0, '/Users/noone')
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from aios.autonomous_discovery import (
     AutonomousLLMAgent,

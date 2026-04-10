@@ -1,0 +1,45 @@
+# ── Build artefacts & caches ─────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.so
+
+# ── Version control ─────────────────────────────────────────────────
+.git/
+.gitattributes
+
+# ── Environment / secrets ───────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ── IDE & OS ────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ── Large / non-essential directories ───────────────────────────────
+docs-archive/
+examples-archive/
+bug_bounty_data/
+bug_bounty_reports/
+evidence/
+iso-builder/
+extracted_apex/
+extracted_apex_full/
+GAVL_AIOS_MARKETING_CAMPAIGN_2025/
+
+# ── Node artefacts ──────────────────────────────────────────────────
+node_modules/
+
+# ── Temp files ──────────────────────────────────────────────────────
+*.tmp
+*.log
+*.pid
+*.db

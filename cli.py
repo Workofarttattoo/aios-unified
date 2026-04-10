@@ -26,15 +26,15 @@ PARENT = ROOT.parent
 if str(PARENT) not in sys.path:
     sys.path.insert(0, str(PARENT))
 
-from aios.runtime import AgentaRuntime  # type: ignore  # noqa: E402
-from aios.config import DISPLAY_NAME, DISPLAY_NAME_FULL, load_manifest  # type: ignore  # noqa: E402
+from runtime import AgentaRuntime  # type: ignore  # noqa: E402
+from config import DISPLAY_NAME, DISPLAY_NAME_FULL, load_manifest  # type: ignore  # noqa: E402
 try:
-    from aios.gui import SchemaPublisher  # type: ignore  # noqa: E402
+    from gui import SchemaPublisher  # type: ignore  # noqa: E402
 except (ImportError, SyntaxError):
     SchemaPublisher = None
-from aios.model import AgentActionError  # type: ignore  # noqa: E402
-from aios.prompt import PromptRouter  # type: ignore  # noqa: E402
-from aios.wizard import SetupWizard  # type: ignore  # noqa: E402
+from model import AgentActionError  # type: ignore  # noqa: E402
+from prompt import PromptRouter  # type: ignore  # noqa: E402
+from wizard import SetupWizard  # type: ignore  # noqa: E402
 try:
     from scripts.compositor import launch_wayland_session  # type: ignore  # noqa: E402
 except (ImportError, SyntaxError):
